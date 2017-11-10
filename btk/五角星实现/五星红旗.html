@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+    <style type="text/css">
+        div.flag{
+            height:390px;
+            width:520px;
+            background-color: red;
+           
+        }
+        div.corner{
+            display:block;
+            position: relative;
+            top: 70px;
+            left:50px;
+            height:0px;
+            width:0px;
+            border-right: 35px solid transparent;
+            border-left: 35px solid transparent;
+            border-top: 26px solid yellow;
+        }
+        div.corner::before{
+            content: "";
+            position: absolute;
+            top: -27px;
+            left: -37.5px;
+            border-right: 35px solid transparent;
+            border-left: 35px solid transparent;
+            border-top: 26px solid yellow;
+            -webkit-transform: rotate(72deg);
+               -moz-transform: rotate(72deg);
+                -ms-transform: rotate(72deg);
+                 -o-transform: rotate(72deg);
+                    transform: rotate(72deg);
+        }
+        div.corner::after{
+            content: "";
+            position: absolute;
+            top: -27px;
+            left: -34.5px;
+            border-right: 35px solid transparent;
+            border-left: 35px solid transparent;
+            border-top: 26px solid yellow;
+            -webkit-transform: rotate(-72deg);
+               -moz-transform: rotate(-72deg);
+                -ms-transform: rotate(-72deg);
+                 -o-transform: rotate(-72deg);
+                    transform: rotate(-72deg);
+        }
+ 
+        div.small1{
+            -webkit-transform: translate(70px,-66px) rotate(-45deg) scale(0.4);
+               -moz-transform: translate(70px,-66px) rotate(-45deg) scale(0.4);
+                -ms-transform: translate(70px,-66px) rotate(-45deg) scale(0.4);
+                 -o-transform: translate(70px,-66px) rotate(-45deg) scale(0.4);
+                    transform: translate(70px,-66px) rotate(-45deg) scale(0.4);
+        }
+        div.small2{
+            -webkit-transform: translate(100px,-63px) rotate(-15deg) scale(0.4);
+               -moz-transform: translate(100px,-63px) rotate(-15deg) scale(0.4);
+                -ms-transform: translate(100px,-63px) rotate(-15deg) scale(0.4);
+                 -o-transform: translate(100px,-63px) rotate(-15deg) scale(0.4);
+                    transform: translate(100px,-63px) rotate(-15deg) scale(0.4);
+        }
+        div.small3{
+            -webkit-transform: translate(100px,-53px) rotate(5deg) scale(0.4);
+               -moz-transform: translate(100px,-53px) rotate(5deg) scale(0.4);
+                -ms-transform: translate(100px,-53px) rotate(5deg) scale(0.4);
+                 -o-transform: translate(100px,-53px) rotate(5deg) scale(0.4);
+                    transform: translate(100px,-53px) rotate(5deg) scale(0.4);
+        }
+        div.small4{
+            -webkit-transform: translate(70px,-52px) rotate(-45deg) scale(0.4);
+               -moz-transform: translate(70px,-52px) rotate(-45deg) scale(0.4);
+                -ms-transform: translate(70px,-52px) rotate(-45deg) scale(0.4);
+                 -o-transform: translate(70px,-52px) rotate(-45deg) scale(0.4);
+                    transform: translate(70px,-52px) rotate(-45deg) scale(0.4);
+        }
+    </style>
+</head>
+<body>
+    <div class="flag">
+        <div class="corner big"></div>
+        <div class="corner small1"></div>
+        <div class="corner small2"></div>
+        <div class="corner small3"></div>
+        <div class="corner small4"></div>
+    </div>
+</body>
+</html>
