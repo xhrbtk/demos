@@ -1,1 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>简易计算器</title>
+<style>
+	body{
+		background-color:#eee;
 
+	}
+	#calculator{
+		width:500px;
+		margin:auto;
+		position: relative;
+		top:300px;
+
+	}
+</style>
+</head>
+<body>
+	<!-- 简易计算器 -->
+	<div id="calculator">
+		<p>
+			<input type="text" class="formerInput" value="1">
+			<span class="sign">+</span>
+			<input type="text" class="laterInput" value="1">
+			<span>=</span>
+			<span class="resultOutput">2</span>
+		</p>
+		<p>
+			<input type="button" value="+"  class="btn" title="add">
+			<input type="button" value="-" class="btn"   title="subtract">
+			<input type="button" value="×" class="btn"  title="multiply">
+			<input type="button" value="÷" class="btn"  title="divide">
+		</p>
+	</div>
+
+	<script>
+		// 获取元素
+		var calculator=document.querySelector('#calculator');
+		var formerInput=calculator.querySelector('.formerInput');
+		var laterInput=calculator.querySelector('.laterInput');
+		var sign=calculator.querySelector('.sign');
+		var resultOutput=calculator.querySelector('.resultOutput');
+		var btns=calculator.querySelectorAll('.btn')
+		// 绑定事件
+		btns[0].onclick=addHandler()
+
+
+
+		for(var i=0;i<btns.length;i++){
+			btns[i].onclick=function(){
+				switch(this.title){
+					case 'add':
+						addHandler();
+						break;
+					case 'subtract':
+						 subtractHandler();
+						break;
+					case 'multiply':
+						multiplyHandler();
+						break;
+					case 'divide':
+						divideHandler();
+						break;
+				}
+			}
+		}
+		// 加
+		function addHandler(){
+			sign.innerHTML='+';
+			resultOutput.innerHTML= + formerInput.value + + laterInput.value;
+		}
+
+		// 减
+		function subtractHandler(){
+			sign.innerHTML='-';
+			resultOutput.innerHTML=formerInput.value-laterInput.value;
+		}
+
+		// 乘
+		function multiplyHandler(){
+			sign.innerHTML='×';
+			resultOutput.innerHTML=formerInput.value*laterInput.value;
+		}
+
+		// 除
+		function divideHandler(){
+			sign.innerHTML='÷';
+			resultOutput.innerHTML=formerInput.value/laterInput.value;
+		}
+
+
+
+	</script>
+</body>
+</html>
