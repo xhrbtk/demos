@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>task8</title>
+</head>
+<style>
+	body{
+		font-family: arial;
+	}
+	table{
+		display: table;
+		border-collapse: separate;
+		border-spacing: 2px;
+		border-color: grey;
+	}
+	.layout{
+		width: 600px;
+		margin: 0 auto;
+	}
+	.layout>table{
+		margin-top: 30px;
+	}
+	.h-table{
+		border-collapse: collapse;
+		border-spacing: 0;
+		width: 100%;
+		border: 1px solid #ccd;
+	}
+	tbody{
+		display: table-row-group;
+		vertical-align: middle;
+		border-color: inherit;
+	}
+	.h-table tr{
+		border: 1px solid #ddd;
+		text-align: left;
+	}
+	tr{
+		display: table-row;
+		vertical-align: inherit;
+		border-color: inherit;
+	}
+	.h-table th{
+		color: #fff;
+		background-color: #4caf50;
+		padding: 8px 8px;
+		font-weight: bold;
+	}
+	.h-table td{
+		padding: 8px 8px;
+	}
+	th{
+		text-align: -internal-center;
+	}
+	td,th{
+		display: table-cell;
+		vertical-align: inherit;
+	}
+
+</style>
+<body>
+	<div class="layout">
+		<table class="h-table">
+			<tbody>
+				<tr>
+					<th>First Name</th>
+					<th>Last Name</th>
+					<th>Points</th>
+				</tr>
+				<tr>
+					<td>Jill</td>
+					<td>Smith</td>
+					<td>50</td>
+				</tr>
+				<tr>
+					<td>Eve</td>
+					<td>Jackson</td>
+					<td>90</td>
+				</tr>
+				<tr>
+					<td>Adam</td>
+					<td>Johnson</td>
+					<td>33</td>
+				</tr>
+				<tr>
+					<td>Bo</td>
+					<td>Nilsson</td>
+					<td>45</td>
+				</tr>
+				<tr>
+					<td>Mike</td>
+					<td>Ross</td>
+					<td>35</td>
+				</tr>
+			</tbody>
+		</table>
+		<table class="h-table v1">
+			<tbody>
+				<tr>
+					<th>First Name</th>
+					<th>Last Name</th>
+					<th>Points</th>
+				</tr>
+				<tr>
+					<td>Jill</td>
+					<td>Smith</td>
+					<td>50</td>
+				</tr>
+				<tr>
+					<td>Eve</td>
+					<td>Jackson</td>
+					<td>90</td>
+				</tr>
+				<tr>
+					<td>Adam</td>
+					<td>Johnson</td>
+					<td>33</td>
+				</tr>
+				<tr>
+					<td>Bo</td>
+					<td>Nilsson</td>
+					<td>45</td>
+				</tr>
+				<tr>
+					<td>Mike</td>
+					<td>Ross</td>
+					<td>35</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</body>
+</html>
