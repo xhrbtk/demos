@@ -5,60 +5,115 @@
 	<title>task8</title>
 </head>
 <style>
+	body{
+		font-family: arial;
+		font-size: 18px;
+	}
 	.layout{
 		width: 600px;
 		margin: 0 auto;
 	}
-	.layout>div{
-		margin-top: 30px;
-
-	}
-	.h-card{
-		width: 300px;
-		box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
-	
-	}
-	.h-card>img{
+	.h-table{
+		margin: 30px;
+		border-collapse: collapse;
+		border-spacing: 0;
+		border: 1px solid #ccc;
 		width: 100%;
-		opacity: 0.75;
-	}
-	.h-card .detail{
-		padding: 1px 16px;
-	}
-	.h-card .detail h3{
-		font-size: 20px;
-		font-weight: bold;
-		margin: 10px 0;
-	}
-
-	.h-card .detail p{
-		overflow: hidden;
-		text-overflow: ellipsis;
-		white-space: nowrap;
 	}
 	
-	.h-card .text-center{
-		text-align: center;
+	.h-table tr{
+		border-bottom: 1px solid #ddd;
+		text-align:left;
+		height: 50px;
 	}
-	.h-card .detail{
-		padding: 1px 16px;
+	.h-table th{
+		color: #fff;
+		background-color: #4CAF50;
+		padding: 8px 0 8px 0;
+		font-weight: bold;
 	}
+	.h-table tr:nth-child(even){
+		background-color: #f1f1f1;
+	}
+	.v1{
+		border: none;
+	}
+	.v1 th{
+		background-color: #fff;
+		color: #000;
+	}
+
 </style>
 <body>
 	<div class="layout">
-		<div class="h-card">
-            <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1510408404316&di=028cb786b1d4e3257e0cfdd0f937c123&imgtype=0&src=http%3A%2F%2Fscimg.jb51.net%2Fallimg%2F160202%2F13-160202215952521.jpg" alt="">
-            <div class="detail">
-            	<h3>小饥</h3>
-                <p>前端工程师一枚，爱生活，爱和平前端工程师一枚，爱生活，爱和平前端工程师一枚，爱生活，爱和平前端工程师一枚，爱生活，爱和平前端工程师一枚，爱生活，爱和平前端工程师一枚，爱生活，爱和平前端工程师一枚，爱生活，爱和平前端工程师一枚，爱生活，爱和平</p>
-            </div>
-		</div>
-		<div class="h-card">
-			<img src="http://imgsrc.baidu.com/imgad/pic/item/3801213fb80e7beca9004ec5252eb9389b506b38.jpg" alt="">
-			<div class="detail text-center">
-				<p>风景如画</p>
-			</div>
-		</div>
+		<table class="h-table">
+			<tbody>
+				<tr>
+					<th>First Name</th>
+					<th>Last Name</th>
+					<th>Points</th>
+				</tr>
+				<tr>
+					<td>Jill</td>
+					<td>Smith</td>
+					<td>50</td>
+				</tr>
+				<tr>
+					<td>Eve</td>
+					<td>Jackson</td>
+					<td>90</td>
+				</tr>
+				<tr>
+					<td>Adam</td>
+					<td>Johnson</td>
+					<td>33</td>
+				</tr>
+				<tr>
+					<td>Bo</td>
+					<td>Nilsson</td>
+					<td>45</td>
+				</tr>
+				<tr>
+					<td>Mike</td>
+					<td>Ross</td>
+					<td>35</td>
+				</tr>
+			</tbody>
+		</table>
+		<table class="h-table v1">
+			<tbody>
+				<tr>
+					<th>First Name</th>
+					<th>Last Name</th>
+					<th>Points</th>
+				</tr>
+				<tr>
+					<td>Jill</td>
+					<td>Smith</td>
+					<td>50</td>
+				</tr>
+				<tr>
+					<td>Eve</td>
+					<td>Jackson</td>
+					<td>90</td>
+				</tr>
+				<tr>
+					<td>Adam</td>
+					<td>Johnson</td>
+					<td>33</td>
+				</tr>
+				<tr>
+					<td>Bo</td>
+					<td>Nilsson</td>
+					<td>45</td>
+				</tr>
+				<tr>
+					<td>Mike</td>
+					<td>Ross</td>
+					<td>35</td>
+				</tr>
+			</tbody>
+		</table>
 	</div>
 </body>
 </html>
