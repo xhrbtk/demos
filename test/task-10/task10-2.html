@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>信息表</title>
+</head>
+<style>
+*{
+	margin: 0;
+	padding: 0;
+	font-family: Arial;
+	color:#757575;
+}
+	.container{
+		width: 600px;
+	
+		box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+		margin: 0 auto;	
+		height: 550px;
+
+	}
+	
+	.container>h2{
+		background-color: #009688;
+		color: #fff;
+		line-height: 1.5;
+		padding: 16px;
+	}
+	form{
+		padding: 16px;
+	}
+	.name input{
+		background: none;
+		border:none;
+		border-bottom: 1px solid #808080;
+		width: 100%;
+		padding: 8px 0;
+	}
+	.name div{
+		margin-top: 30px;
+	}
+	.name div label{
+		
+		font-size: 20px;
+	}
+	.name div>textarea{
+		width: 100%;
+		border: none;
+		border-bottom: 1px solid #808080;
+	}
+	.clearfix div {
+		font-size: 20px;
+	}
+	.clearfix .half{
+		width: 50%;
+		float: left;
+		line-height: 1.5;
+	}
+	.clearfix{
+		margin-top: 20px;
+	}
+	.button{
+		margin-top: 50px;
+	}
+	.button input{
+		background-color:#009688;
+		padding: 8px 16px;
+		color: #fff;
+		border: none;
+		font-size: 15px;
+
+	}
+
+
+</style>
+<body>
+	<div class="container">
+		<h2>信息收集表</h2>
+		<form >
+			<div class="name">
+				<div>
+					<label>姓名</label>
+		        	<input type="text" name="">
+				</div>
+				<div>
+					<label>QQ</label>
+		        	<input type="text" name="">
+				</div>
+				<div>
+					<label>要说的话</label>
+		        	<textarea name="" rows="3" cols="5"></textarea>	
+				</div>
+			</div>
+			<div class="clearfix">
+				<div class="half" >
+					<input type="checkbox" name="">
+					<label>Milk</label>
+					<br>
+					<input type="checkbox" name="">
+					<label>Sugar</label>
+					<br>
+					<input type="checkbox" name="" checked>
+					<label>Lemon</label>
+				</div>
+				<div clas="half">
+					<input type="radio" name="" checked>
+					<label>Male</label>
+					<br>
+					<input type="radio" name="">
+					<label>Female</label>
+				</div>
+			</div>
+			<div class="button">
+				<input type="submit" name="" vlaue="Submit">
+			</div>
+
+		</form>
+		
+	</div>
+</body>
+</html>
