@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>负边距布局</title>
+</head>
+<style>
+	*{
+		margin: 0;
+		padding: 0;
+	}
+
+	.container{
+		width: 900px;
+		overflow: hidden;
+		margin: 0 auto;
+		text-align: center;
+		opacity: 0.75;
+	
+	}
+	.container>h1{
+		line-height: 80px;
+	}
+	ul,li{
+		list-style: none;
+		margin: 0;
+		padding: 0;
+	}
+	ul{
+		border-top: 1px solid #ccc;
+		overflow: hidden;
+		margin-left: -30px;
+	}
+	.item{
+		float: left;
+		width: 300px;
+		height: 300px;
+		margin-top: 10px;
+		margin-left: 10px;
+		margin-bottom: 10px;
+		overflow: hidden;
+		box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)!important;
+		
+	}
+	.item>img{
+		height: 220px;
+		width: 300px;
+	}
+	.item>h2{
+
+		font-weight: normal;
+		line-height: 3;
+	}
+
+
+</style>
+<body>
+	<div class="container">
+		<h1>风景列表</h1>
+		<ul>
+			<li   class="item">
+				<img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1511179239427&di=0e291f5152a84a289e81f7da06899d41&imgtype=0&src=http%3A%2F%2Fimgsrc.baidu.com%2Fimgad%2Fpic%2Fitem%2F3801213fb80e7beca9004ec5252eb9389b506b38.jpg" alt="">
+			<h2>风景如画<h2>
+			</li>
+			<li   class="item">
+				<img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1511179239427&di=0e291f5152a84a289e81f7da06899d41&imgtype=0&src=http%3A%2F%2Fimgsrc.baidu.com%2Fimgad%2Fpic%2Fitem%2F3801213fb80e7beca9004ec5252eb9389b506b38.jpg" alt="">
+				<h2>风景如画</h2>
+			</li>
+			<li   class="item">
+				<img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1511179239427&di=0e291f5152a84a289e81f7da06899d41&imgtype=0&src=http%3A%2F%2Fimgsrc.baidu.com%2Fimgad%2Fpic%2Fitem%2F3801213fb80e7beca9004ec5252eb9389b506b38.jpg" alt="">
+				<h2>风景如画</h2>
+			</li>
+			<li   class="item">
+				<img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1511179239427&di=0e291f5152a84a289e81f7da06899d41&imgtype=0&src=http%3A%2F%2Fimgsrc.baidu.com%2Fimgad%2Fpic%2Fitem%2F3801213fb80e7beca9004ec5252eb9389b506b38.jpg" alt="">
+				<h2>风景如画</h2>
+			</li>
+			<li   class="item">
+				<img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1511179239427&di=0e291f5152a84a289e81f7da06899d41&imgtype=0&src=http%3A%2F%2Fimgsrc.baidu.com%2Fimgad%2Fpic%2Fitem%2F3801213fb80e7beca9004ec5252eb9389b506b38.jpg" alt="">
+				<h2>风景如画</h2>
+			</li>
+			<li   class="item">
+				<img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1511179239427&di=0e291f5152a84a289e81f7da06899d41&imgtype=0&src=http%3A%2F%2Fimgsrc.baidu.com%2Fimgad%2Fpic%2Fitem%2F3801213fb80e7beca9004ec5252eb9389b506b38.jpg" alt="">
+				<h2>风景如画</h2>
+			</li>
+		</ul>
+	</div>
+
+</body>
+</html>
