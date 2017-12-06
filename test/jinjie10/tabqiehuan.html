@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+</head>
+<style>
+*{
+	box-sizing: border-box;
+}
+ul,li{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+.tab-ct .header:after{
+	content: '';
+	display: block;
+	clear: both;
+}
+.tab-ct{
+	padding: 3px 3px 3px 5px;
+	border: 1px solid #ccc;
+	width: 310px;
+}
+.tab-ct .header>li{
+	width: 100px;
+	height: 30px;
+	line-height: 30px;
+	border: 1px solid #ccc;
+	border-right: none;
+	float: left;
+	text-align: center;
+
+}
+.tab-ct .header>li.active{
+	background: #ccc;
+}
+.tab-ct .header>li:last-child{
+	border-right: 1px solid #ccc;
+}
+.tab-ct .content>li{
+	width: 300px;
+	height: 100px;
+	border: 1px solid #ccc;
+	border-top: none;
+	padding: 10px;
+	display: none;
+}
+.tab-ct .content>li.active{
+	display: block;
+}
+</style>
+<body>
+	<div class="tab-ct">
+		<ul class="header">
+			<li class="active">tab1</li>
+			<li>tab2</li>
+			<li>tab3</li>
+		</ul>
+		<ul class="content">
+			<li class="active">ct1</li>
+			<li>ct2</li>
+			<li>ct3</li>
+		</ul>
+	</div>
+	<script>
+
+
+		var tabs=document.querySelectorAll(".tab-ct .header>li")
+		var panels=document.querySelectorAll(".tab-ct .content>li")
+
+		tabs.forEach(function(tab){
+			tab.addEventListener('click',function(){
+				tabs.forEach(function(node){
+					node.classList.remove('active')  //去掉每一项的active
+				})
+				this.classList.add('active')
+				var index=[].indexOf.call(tabs,this)
+				panels.forEach( function(node) {
+					node.classList.remove('active')
+				});
+				panels[index].classList.add('active')
+			})
+		})
+
+
+		//普通方法
+
+		var index=0
+		//切换tab
+		function changeTab(){
+			//首先将所有li中的active去掉
+			for(var i=0;i<tabs.length;i++){
+				tabs[i].classList.remove('active')
+				panels[i].classList.remove('active')
+			}
+			tabs[index].classList.add('active')
+			panels[index].classList.add('active')
+		}
+		//点击选项卡
+		for(var j=0;j<tabs.length;j++){
+			tabs[j].id=j
+			tabs[j].onclick=function(){
+				index=this.id
+				changeTab()
+			}
+		}	
+</script>
+</body>
+</html>
