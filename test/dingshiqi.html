@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="description" content="task22-3" />
+  <meta charset="utf-8">
+  <title>JS Bin</title>
+  <style>
+  
+  </style>
+</head>
+<style>
+	li{
+		border: 1px solid red;
+	}
+</style>
+<body>
+<select placeholder="选择一个时间" id=myselect>
+	<option value="1"  selected>1分钟</option>
+	<option value="5">5分钟</option>
+	<option value="10">10分钟</option>
+	<option value="20">20分钟</option>
+</select>
+<button id=startButton>start</button>
+<button id=pauseButton disabled>pause</button>
+<button id=resumeButton disabled>resume</button>
+<div id="outputDiv">
+	
+</div>
+<script>
+var timeLeft=10
+var timer=null
+function showTime(){
+	outputDiv.textContent=timeLeft+'秒';
+	if(timeLeft===0) return;
+	--timeLeft;
+	timer=setTimeout(showTime,1000)
+}
+startButton.onclick=function(){
+	timeLeft=parseInt(myselect.value)*60
+	console.log(timeLeft)
+	if(timer){
+		window.clearTimeout(timer)
+	}
+	showTime()
+	pauseButton.disabled=false
+}
+pauseButton.onclick=function(){
+	console.log(timer)
+	if(timer){
+		console.log("123")
+		window.clearTimeout(timer)
+	}
+	resumeButton.disabled=false
+}
+
+resumeButton.onclick=function(){
+
+	showTime()
+	pauseButton.disabled=false
+}
+
+</script>
+
+
+</body>
+</html>
