@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>左右切换</title>
+    <script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+</head>
+<style>
+*{
+    box-sizing: border-box;
+}
+ul,li{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.mod-tab.tabs:after{
+    content: '';
+    display: block;
+    clear: both;
+}
+.mod-tab{
+    padding: 3px 3px 3px 5px;
+    border: 1px solid #ccc;
+    width: 910px;
+    margin: 0 auto;
+    
+}
+.mod-tab .tabs>li{
+    width: 33.3%;
+    height: 30px;
+    line-height: 30px;
+    border: 1px solid #ccc;
+    border-right: none;
+    float: left;
+    text-align: center;
+}
+.mod-tab .tabs>li.active{
+    background: yellow;
+}
+.mod-tab .tabs>li:last-child{
+    border-right: 1px solid #ccc;
+}
+.mod-tab .wrap{
+    position: relative;
+    height: 600px;
+    overflow: hidden;
+    border:1px solid #ccc;
+    
+
+}
+.mod-tab .panels{
+    position: absolute;
+ 
+    width: 2710px;
+
+
+}
+.panel{
+    width: 900px;
+    height: 600px;
+    float: left;
+
+}
+
+.wrap .panels>li:nth-child(1){
+    background: url("https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1514115936461&di=dc7497df14b20ff862b1b00cd5332abb&imgtype=0&src=http%3A%2F%2Fimgsrc.baidu.com%2Fimgad%2Fpic%2Fitem%2F42a98226cffc1e17a55b7e084190f603738de927.jpg");
+    background-repeat: no-repeat;
+    background-size: 900px 600px;
+
+}
+.wrap .panels>li:nth-child(2){
+    background: url("https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1514115855556&di=cf7d0aff75e60751bd3d45305fda38f6&imgtype=0&src=http%3A%2F%2Fpic15.nipic.com%2F20110617%2F1987140_105915109000_2.jpg");
+    background-repeat: no-repeat;
+     background-size: 900px 600px;
+}
+.wrap .panels>li:nth-child(3){
+    background: url("https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1514115818841&di=6c04ced8b6767ae3d44de11417e33d25&imgtype=0&src=http%3A%2F%2Fimgsrc.baidu.com%2Fimgad%2Fpic%2Fitem%2Fc995d143ad4bd113ddcfb60e51afa40f4bfb058f.jpg");
+    background-repeat: no-repeat;
+     background-size: 900px 600px;
+}
+.mod-tab .panels>li.active{
+    display: block;
+}
+
+</style>
+<body>
+    <div class="mod-tab">
+        <ul class="tabs">
+            <li class="active">tab1</li>
+            <li>tab2</li>
+            <li>tab3</li>
+        </ul>
+        <div class="wrap">
+            <ul class="panels">
+            <li class=" panel active">ct1</li>
+            <li class="panel">ct2</li>
+            <li class="panel">ct3</li>
+        </ul>
+        </div>
+        
+    </div>
+    <script>
+    // 切换
+        $(".tabs>li").on('click',function(){
+            var $this=$(this)
+            var index=$this.index()
+            console.log(index)
+            var panelWidth=$('.panels li').first().width()
+            console.log(panelWidth)
+            $this.addClass('active').siblings().removeClass('active')
+            $this.parents('.mod-tab').find('.panels').animate({left:-panelWidth*index})
+        })
+        // 上下滑动
+        
+    </script>
+</body>
+</html>
