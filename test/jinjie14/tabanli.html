@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+</head>
+<style>
+*{
+	box-sizing: border-box;
+}
+ul,li{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+.tab{
+	width: 620px;
+	margin: 0 auto;
+	
+	/*border: 1px solid red;*/
+}
+.tab>.header{
+	width: 210px;
+	height: 50px;
+	text-align: center;
+	/*border: 1px solid #ccc;
+	border-radius: 3px;*/
+}
+.header>li{
+	float: left;
+	width: 70px;
+	font-size: 14px;
+	line-height: 50px;
+	border-left: 1px solid #ccc;
+	border: 1px solid #ccc;
+	display: inline-block;
+	/*position: relative;*/
+
+}
+
+.header:after{
+	content: '';
+	display:"block";
+	clear: both;
+}
+.content{
+	width:942px ;
+	height: 610px;
+	border: 1px solid #ccc;
+	overflow: hidden;
+}
+.panel{
+	/*width: 952px;*/
+	height: 600px;
+	
+}
+.panel li{
+	position: relative;
+}
+.listhover{
+	
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 300px;
+	height: 290px;
+	border: 1px solid green;
+	background: rgba(254,200,54,.9);
+	text-align: center;
+	/*line-height: 290px;*/
+	display: none;
+}
+.icon1{
+	display: inline-block;
+	text-decoration: none;
+	background: #fff;
+	border: 1px solid red;
+	position: absolute;
+	color: red;
+	left: 90px;
+	width: 120px;
+	padding: 20px;
+	top: 113px;
+	
+}
+.panel .hover{
+	display: block;
+	opacity: 0.7;
+}
+
+.panel li{
+	float: left;
+	margin-left: 10px;
+	margin-top: 10px;
+}
+.panel li img{
+	width: 300px;
+	height: 290px;
+}
+.content .panel{
+	display: none;
+}
+.content .active{
+	display: block;
+}
+.header .active{
+	background-color: #ccc;
+}
+
+
+
+
+
+</style>
+<body>
+	<div class="tab">
+		<ul class="header">
+			<li class="active">热门</li>
+			<li>珠宝首饰</li>
+			<li>奢侈品</li>
+		</ul>
+		<div class="content">
+			<ul class=" panel active">
+				<li class="dingwei class="dingwei"" ><img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1514125932649&di=d3b4a7fa92d2851278676e176b41a381&imgtype=0&src=http%3A%2F%2Fimg1.3lian.com%2F2015%2Fa1%2F148%2Fd%2F116.jpg" alt="">
+				<div class="listhover">
+					<a href="#" class="icon1">立即抢购</a>
+				</div>
+				</li>
+
+				<li class="dingwei class="dingwei""><img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1514720650&di=080b8b24661c61eae606c600ce067674&imgtype=jpg&er=1&src=http%3A%2F%2Ffile06.16sucai.com%2F2016%2F0518%2Fd58ce7c38c0d1f06fa6ab504b293408d.jpg" alt="">
+				<div class="listhover">
+					<a href="#" class="icon1">立即抢购</a>
+				</div>
+				</li>
+				<li class="dingwei class="dingwei""><img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1514125932649&di=956aa3d013fa6f9e292bda7c175e805e&imgtype=0&src=http%3A%2F%2Fimg.taopic.com%2Fuploads%2Fallimg%2F120528%2F188952-12052Q25F491.jpg" alt="">
+				<div class="listhover">
+					<a href="#" class="icon1">立即抢购</a>
+				</div>
+				</li>
+				<li class="dingwei"><img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1514125932648&di=41c1a0ebf9e79effa0b6108c4aa339bb&imgtype=0&src=http%3A%2F%2Fimg.taopic.com%2Fuploads%2Fallimg%2F120819%2F214833-120Q921424983.jpg" alt="">
+				<div class="listhover">
+					<a href="#" class="icon1">立即抢购</a>
+				</div>
+				</li>
+				<li class="dingwei"><img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1514125932647&di=502c45449c9578be1a8c1937caf6fbd2&imgtype=0&src=http%3A%2F%2Fimgsrc.baidu.com%2Fimgad%2Fpic%2Fitem%2F9f2f070828381f30fbba465aa3014c086f06f0a6.jpg" alt="">
+				<div class="listhover">
+					<a href="#" class="icon1">立即抢购</a>
+				</div>
+				</li>
+				<li class="dingwei"><img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1514125932646&di=ae2566971ec7b7e45557091659f365b5&imgtype=0&src=http%3A%2F%2Fpic.jj20.com%2Fup%2Fallimg%2F1011%2F04121G13138%2F1F412113138-8.jpg" alt="">
+				<div class="listhover">
+					<a href="#" class="icon1">立即抢购</a>
+				</div>
+				</li>
+			</ul>
+			<ul class="panel">
+				<li class="dingwei"><img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1514720650&di=080b8b24661c61eae606c600ce067674&imgtype=jpg&er=1&src=http%3A%2F%2Ffile06.16sucai.com%2F2016%2F0518%2Fd58ce7c38c0d1f06fa6ab504b293408d.jpg" alt="">
+				<div class="listhover">
+					<a href="#" class="icon1">立即抢购</a>
+				</div>
+				</li>
+				<li class="dingwei"><img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1514125932649&di=956aa3d013fa6f9e292bda7c175e805e&imgtype=0&src=http%3A%2F%2Fimg.taopic.com%2Fuploads%2Fallimg%2F120528%2F188952-12052Q25F491.jpg" alt="">
+				<div class="listhover">
+					<a href="#" class="icon1">立即抢购</a>
+				</div>
+				</li>
+				<li class="dingwei"><img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1514125932649&di=d3b4a7fa92d2851278676e176b41a381&imgtype=0&src=http%3A%2F%2Fimg1.3lian.com%2F2015%2Fa1%2F148%2Fd%2F116.jpg" alt="">
+				<div class="listhover">
+					<a href="#" class="icon1">立即抢购</a>
+				</div>
+				</li>
+				<li class="dingwei"><img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1514125932648&di=41c1a0ebf9e79effa0b6108c4aa339bb&imgtype=0&src=http%3A%2F%2Fimg.taopic.com%2Fuploads%2Fallimg%2F120819%2F214833-120Q921424983.jpg" alt="">
+				<div class="listhover">
+					<a href="#" class="icon1">立即抢购</a>
+				</div>
+				</li>
+				<li class="dingwei"><img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1514125932647&di=502c45449c9578be1a8c1937caf6fbd2&imgtype=0&src=http%3A%2F%2Fimgsrc.baidu.com%2Fimgad%2Fpic%2Fitem%2F9f2f070828381f30fbba465aa3014c086f06f0a6.jpg" alt="">
+				<div class="listhover">
+					<a href="#" class="icon1">立即抢购</a>
+				</div>
+				</li>
+				<li class="dingwei"><img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1514125932646&di=ae2566971ec7b7e45557091659f365b5&imgtype=0&src=http%3A%2F%2Fpic.jj20.com%2Fup%2Fallimg%2F1011%2F04121G13138%2F1F412113138-8.jpg" alt="">
+				<div class="listhover">
+					<a href="#" class="icon1">立即抢购</a>
+				</div>
+				</li>
+			</ul>
+			<ul class="panel">
+				<li class="dingwei"><img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1514125932646&di=ae2566971ec7b7e45557091659f365b5&imgtype=0&src=http%3A%2F%2Fpic.jj20.com%2Fup%2Fallimg%2F1011%2F04121G13138%2F1F412113138-8.jpg" alt="">
+				<div class="listhover">
+					<a href="#" class="icon1">立即抢购</a>
+				</div>
+				</li>
+				<li class="dingwei"><img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1514720650&di=080b8b24661c61eae606c600ce067674&imgtype=jpg&er=1&src=http%3A%2F%2Ffile06.16sucai.com%2F2016%2F0518%2Fd58ce7c38c0d1f06fa6ab504b293408d.jpg" alt="">
+				<div class="listhover">
+					<a href="#" class="icon1">立即抢购</a>
+				</div>
+				</li>
+				<li class="dingwei"><img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1514125932649&di=956aa3d013fa6f9e292bda7c175e805e&imgtype=0&src=http%3A%2F%2Fimg.taopic.com%2Fuploads%2Fallimg%2F120528%2F188952-12052Q25F491.jpg" alt="">
+				<div class="listhover">
+					<a href="#" class="icon1">立即抢购</a>
+				</div>
+				</li>
+				<li class="dingwei"><img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1514125932649&di=d3b4a7fa92d2851278676e176b41a381&imgtype=0&src=http%3A%2F%2Fimg1.3lian.com%2F2015%2Fa1%2F148%2Fd%2F116.jpg" alt="">
+				<div class="listhover">
+					<a href="#" class="icon1">立即抢购</a>
+				</div>
+				</li>
+				<li class="dingwei"><img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1514125932648&di=41c1a0ebf9e79effa0b6108c4aa339bb&imgtype=0&src=http%3A%2F%2Fimg.taopic.com%2Fuploads%2Fallimg%2F120819%2F214833-120Q921424983.jpg" alt="">
+				<div class="listhover">
+					<a href="#" class="icon1">立即抢购</a>
+				</div>
+				</li>
+				<li class="dingwei"><img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1514125932647&di=502c45449c9578be1a8c1937caf6fbd2&imgtype=0&src=http%3A%2F%2Fimgsrc.baidu.com%2Fimgad%2Fpic%2Fitem%2F9f2f070828381f30fbba465aa3014c086f06f0a6.jpg" alt="">
+				<div class="listhover">
+					<a href="#" class="icon1">立即抢购</a>
+				</div>
+				</li>
+				
+			</ul>
+		</div>
+	</div>
+
+
+	<script>
+	// 切换
+		$(".header>li").on('click',function(){
+			var $this=$(this)
+			var index=$this.index()
+			console.log($this)
+			console.log(index)
+			var x=$('.content ').eq(index)
+			console.log(x[0])
+			$this.addClass('active').siblings().removeClass('active')
+			$('.panel ').eq(index).addClass('active').siblings().removeClass('active')
+		})
+		$(".panel>li").on('mouseenter',function(){
+			var $this=$(this)
+			// console.log($this.find("div")[0])
+			$this.find('div').addClass('hover').siblings().removeClass('hover')
+			// $('.panel ').eq(index).addClass('active').siblings().removeClass('active')
+		})
+			$(".panel>li").on('mouseleave',function(){
+			var $this=$(this)
+			console.log($this.find("div")[0])
+			$this.find('div').removeClass('hover')
+			// $('.panel ').eq(index).addClass('active').siblings().removeClass('active')
+		})
+
+	</script>
+</body>
+</html>
