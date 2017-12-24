@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>上下滑动</title>
+	<script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+</head>
+<style>
+*{
+	box-sizing: border-box;
+}
+ul,li{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+.mod-tab.tabs:after{
+	content: '';
+	display: block;
+	clear: both;
+}
+.mod-tab{
+	padding: 3px 3px 3px 5px;
+	border: 1px solid #ccc;
+	width: 310px;
+}
+.mod-tab .tabs>li{
+	width: 100px;
+	height: 30px;
+	line-height: 30px;
+	border: 1px solid #ccc;
+	border-right: none;
+	float: left;
+	text-align: center;
+}
+.mod-tab .tabs>li.active{
+	background: #ccc;
+}
+.mod-tab .tabs>li:last-child{
+	border-right: 1px solid #ccc;
+}
+.mod-tab .wrap{
+	position: relative;
+	height: 180px;
+	overflow: hidden;
+	border: 1px solid red;
+	
+
+}
+.mod-tab .panels{
+	position: absolute;
+	width: 100%;
+
+}
+
+.wrap .panels>li:nth-child(1){
+	background-color: red;
+}
+.wrap .panels>li:nth-child(2){
+	background-color: green;
+}
+.wrap .panels>li:nth-child(3){
+	background-color: blue;
+}
+.mod-tab .panels>li.active{
+	display: block;
+}
+.panel{
+	height: 180px;
+	overflow: hidden;
+	
+}
+</style>
+<body>
+	<div class="mod-tab">
+		<ul class="tabs">
+			<li class="active">tab1</li>
+			<li>tab2</li>
+			<li>tab3</li>
+		</ul>
+		<div class="wrap">
+			<ul class="panels">
+			<li class=" panel active">ct1</li>
+			<li class="panel">ct2</li>
+			<li class="panel">ct3</li>
+		</ul>
+		</div>
+		
+	</div>
+	<script>
+	// 切换
+		$(".tabs>li").on('click',function(){
+			var $this=$(this)
+			var index=$this.index()
+			console.log(index)
+			var panelHeight=$('.mod-tab .wrap').height()
+			console.log(panelHeight)
+			$this.addClass('active').siblings().removeClass('active')
+			$this.parents('.mod-tab').find('.panels').animate({top:-panelHeight*index})
+		})
+		// 上下滑动
+		
+	</script>
+</body>
+</html>
