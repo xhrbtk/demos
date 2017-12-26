@@ -1,128 +1,38 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8"/>
-    <title>
-      加载更多
-    </title>
-    <style>
-      ul,li{
-      margin: 0;
-      padding: 0
-    }
-    #ct li{
-      list-style:none;
-      border: 1px solid #ccc;
-      padding: 10px;
-      margin-top: 10px;
-      cursor:pointer;
-    }
-    #load-more{
-      display: block;
-      margin: 10px auto;
-      text-align: center;
-      cursor: pointer;
-    }
-    #load-more img{
-      width: 40px;
-      height: 40px;
-    }
-    .btn{
-      display: inline-block;
-      height: 40px;
-      line-height: 40px;
-      width: 80px;
-      border: 1px solid #E27272;
-      border-radius: 3px;
-      text-align: center;
-      text-decoration: none;
-      color: #E27272;
-    }
-    .btn:hover{
-      background: green;
-      color: #fff;
-    }
-      </style>
-  </head>
-  <body>
-    <ul id="ct">
-    </ul>
-    <a id="load-more" class="btn" href="#">
-      加载更多
-    </a>
-  </body>
 
-  <script>
-      
-  /*定义接口
-  
-  1) url:
-  2) 入参: { start: 2, len: 6 }
-  3) 回参: 
-  {
-    status: 1, //1代表正常，0代表出错
-    data: [2,3,4,5,6,7]
-  }
-  */
-  
-  var ct = document.querySelector('#ct')
-  var btn = document.querySelector('#load-more')
+var http = require('http')
+var fs = require('fs')    //启用读写文件模块
+var url = require('url')
+var path = require('path')  //防止不同系统路径不统一的情况
 
-  var curIndex = 0  //当前要加载的数据的序号
-  var len = 5   // 每次加载多少个数据
-  var isLoading = false  //状态锁，用于判断是否在加载数据
+http.createServer(function(req, res){
 
-  btn.addEventListener('click', function(e){
-    e.preventDefault();  //防止点击 a 链接页面跳到顶部
+  var pathObj = url.parse(req.url, true)  //得到一个有很多信息的请求的url对象
+  console.log(pathObj)
 
-    if(isLoading) {
-      return   //如果正在请求数据，那这次点击什么都不做
-    }
+  switch (pathObj.pathname) {
+      case '/loadMore':
 
-    //执行到这里说明 没有正在发出的请求，那后面就可以发请求
-    isLoading = true   //发请求之前做个标记加锁
-    ajax('/loadMore', {
-      idx: curIndex,
-      len: len
-    }, function(data){
-      appendData(data)
-      isLoading = false   //数据到来之后 解
-      curIndex = curIndex + len  //修改序号，下次要数据就从新序号开始要
-      console.log(curIndex)
-    })
- 
-  }) 
+      var curIdx = pathObj.query.idx  //点击第一次后即curIdx=0,上面打印出来pathObj可以在命令行里面看到query参数 query: { idx: '0', len: '5' }
+      var len = pathObj.query.len  //点击第一次后即len=5
+      var data = []  //定义数据
 
-
-  function ajax(url, json, onSuccess, onError) {
-    var xhr = new XMLHttpRequest()
-    var arr = []
-    for (key in json) {
-      arr.push(key + '=' + json[key])
-    }
-    url += '?' + arr.join('&')
-    xhr.open('get', url)
-    xhr.send()
-
-     xhr.onload = function(){
-      if((xhr.status >= 200 && xhr.status < 300) || xhr.status == 304){
-        onSuccess(JSON.parse(this.response))
-      }else{
-        onError && onError()
+      for(var i = 0; i < len; i++) {
+        data.push('新闻' + (parseInt(curIdx) + i))  //点击第一次按钮后data = ["新闻0","新闻1","新闻2","新闻3","新闻4"]
       }
-    }
-  }
+      res.end(JSON.stringify(data)) //把数据data变成json格式发出去
+          
+      break;
 
-
-  function appendData(data){
-    for(var i = 0; i<data.length; i++){
-      var child = document.createElement('li')
-      child.innerText = data[i]
-      ct.appendChild(child)
-    }
-  }
-  
-  
+    default:
+     fs.readFile(path.join(__dirname ,'static', pathObj.pathname), function(err, data){
+         //如果pathObj.pathname不是'/loadmore',访问pathObj.pathname对应的绝对路径下的静态文件
+      if(err){  //访问不到
+        res.statusCode = 404
+        res.end('Not found')
+      }else{
+        res.end(data)
+      }
+     })
       
-    </script>
-</html>
+  }
+}).listen(8080)
