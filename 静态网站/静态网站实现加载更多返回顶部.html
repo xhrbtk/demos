@@ -1,0 +1,1025 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>ceshi</title>
+</head>
+<style>
+	*{
+		margin: 0;
+		padding: 0;
+	}
+	body{
+		padding: 0;
+		margin: 0;
+	}
+.titles{
+font-size: 50px;
+line-height: 2;
+
+	}
+.titles-explain{
+		font-style: italic;
+		color: gray;
+	}
+	/*购物车*/
+	@font-face {
+  font-family: 'iconfont1';  /* project id 485418 */
+  src: url('//at.alicdn.com/t/font_485418_yid8rmes23boi529.eot');
+  src: url('//at.alicdn.com/t/font_485418_yid8rmes23boi529.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_485418_yid8rmes23boi529.woff') format('woff'),
+  url('//at.alicdn.com/t/font_485418_yid8rmes23boi529.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_485418_yid8rmes23boi529.svg#iconfont') format('svg');
+}
+.iconfont1{
+	font-family:"iconfont1" !important;
+  font-size:80px;
+  font-style:normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  cursor: default;
+}
+/*电脑*/
+@font-face {
+  font-family: 'iconfont2';  /* project id 485425 */
+  src: url('//at.alicdn.com/t/font_485425_o98huwkq6lx1dcxr.eot');
+  src: url('//at.alicdn.com/t/font_485425_o98huwkq6lx1dcxr.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_485425_o98huwkq6lx1dcxr.woff') format('woff'),
+  url('//at.alicdn.com/t/font_485425_o98huwkq6lx1dcxr.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_485425_o98huwkq6lx1dcxr.svg#iconfont') format('svg');
+}
+.iconfont2{
+	font-family:"iconfont2" !important;
+  font-size:80px;
+  font-style:normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  cursor: default;
+}
+/*为图标添加的圈圈*/
+.iconfont1,.iconfont2,.iconfont3{
+  line-height:120px;
+  text-align:center;
+}
+.circle{
+  width:120px;
+  height:120px;
+  display:inline-block;
+  color:#fff;
+  border-radius:50%;
+  background-color:yellow;
+  margin-bottom: 20px;
+  
+}
+/*锁*/
+@font-face {
+  font-family: 'iconfont3';  /* project id 485428 */
+  src: url('//at.alicdn.com/t/font_485428_choxtmvwhx6wp14i.eot');
+  src: url('//at.alicdn.com/t/font_485428_choxtmvwhx6wp14i.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_485428_choxtmvwhx6wp14i.woff') format('woff'),
+  url('//at.alicdn.com/t/font_485428_choxtmvwhx6wp14i.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_485428_choxtmvwhx6wp14i.svg#iconfont') format('svg');
+}
+.iconfont3{
+	font-family:"iconfont3" !important;
+  font-size:80px;
+  font-style:normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+ 
+  cursor: default;
+}
+/*lianxifangshi*/
+@font-face {
+  font-family: 'iconfont4';  /* project id 486616 */
+  src: url('//at.alicdn.com/t/font_486616_3fcs7lagvkhp8pvi.eot');
+  src: url('//at.alicdn.com/t/font_486616_3fcs7lagvkhp8pvi.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_486616_3fcs7lagvkhp8pvi.woff') format('woff'),
+  url('//at.alicdn.com/t/font_486616_3fcs7lagvkhp8pvi.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_486616_3fcs7lagvkhp8pvi.svg#iconfont') format('svg');
+}
+/*weibo*/
+@font-face {
+  font-family: 'iconfont5';  /* project id 486618 */
+  src: url('//at.alicdn.com/t/font_486618_3oedv856lcqy3nmi.eot');
+  src: url('//at.alicdn.com/t/font_486618_3oedv856lcqy3nmi.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_486618_3oedv856lcqy3nmi.woff') format('woff'),
+  url('//at.alicdn.com/t/font_486618_3oedv856lcqy3nmi.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_486618_3oedv856lcqy3nmi.svg#iconfont') format('svg');
+}
+/*weixin*/
+@font-face {
+  font-family: 'iconfont6';  /* project id 486619 */
+  src: url('//at.alicdn.com/t/font_486619_igju7lo4mqi4fgvi.eot');
+  src: url('//at.alicdn.com/t/font_486619_igju7lo4mqi4fgvi.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_486619_igju7lo4mqi4fgvi.woff') format('woff'),
+  url('//at.alicdn.com/t/font_486619_igju7lo4mqi4fgvi.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_486619_igju7lo4mqi4fgvi.svg#iconfont') format('svg');
+}
+.iconfont4{
+	font-family:"iconfont4" !important;
+   font-size:40px;
+  font-style:normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  cursor: default;
+  
+}
+.iconfont5{
+	font-family:"iconfont5" !important;
+   font-size:40px;
+  font-style:normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  cursor: default;
+  
+}
+.iconfont6{
+	font-family:"iconfont6" !important;
+   font-size:40px;
+  font-style:normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  cursor: default;
+  
+}
+
+@font-face {
+  font-family: 'iconfont7';  /* project id 486695 */
+  src: url('//at.alicdn.com/t/font_486695_d4j7u0ylgyxvfgvi.eot');
+  src: url('//at.alicdn.com/t/font_486695_d4j7u0ylgyxvfgvi.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_486695_d4j7u0ylgyxvfgvi.woff') format('woff'),
+  url('//at.alicdn.com/t/font_486695_d4j7u0ylgyxvfgvi.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_486695_d4j7u0ylgyxvfgvi.svg#iconfont') format('svg');
+}
+.iconfont7{
+	font-family:"iconfont7" !important;
+   font-size:80px;
+  font-style:normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  cursor: default;
+  color: #f1f1f1;
+  
+}
+
+
+
+.circle1{
+  width:50px;
+  height:50px;
+  display:inline-block;
+  color:#fff;
+  border-radius:50%;
+  background-color:black;
+  margin-bottom: 20px;
+  text-align:center;
+  
+}
+.iconfont4,.iconfont5,.iconfont6{
+  line-height:50px;
+}
+
+
+
+
+
+
+	/*header*/
+	#header{
+		height: 820px;
+	
+		background-image: url(https://cdn.pixabay.com/photo/2017/01/04/21/00/new-years-eve-1953253__340.jpg);
+		overflow: hidden;
+		background-repeat: no-repeat;
+		background-size: cover;
+		padding: 20px;
+	}
+	.nav li{
+		list-style: none;
+		display: inline-block;
+		padding-left:20px ;
+		float: right;
+		line-height: 100px;
+
+		
+	}
+	.nav>li>a{
+		text-decoration: none;
+		color: #fff;
+	}
+	.nav>li>a:hover{
+		color: green;
+	}
+	.nav{
+		width: 1200px;
+		height: 100px;
+	
+	}
+	.nav:after{
+		content: '';
+		display: block;
+		clear: both;
+	}
+	.nav-h{
+		color: #fff;
+		display: block;
+		font-size: 42px;
+		line-height: 100px;
+		cursor: pointer;
+	}
+	.nav-name{
+		width: 100%;
+		height: 500px;
+
+		text-align: center;
+		color: #fff;
+		padding-top: 250px;
+	}
+	.nav-name>a{
+		text-decoration: none;
+		color: black;
+		font-weight: bold;
+
+	}
+	.nav-name>h2{
+		font-style: italic;
+		font-size:40px;
+		padding-bottom: 20px;
+	}
+	.nav-name>h1{
+		font-size: 60px;
+		padding-bottom: 20px;
+	}
+	.nav-name>a{
+		display: inline-block;
+		padding: 30px 100px;
+		background-color: yellow;
+		border-radius: 10px;
+
+	}
+
+	/*services*/
+	#services{
+		width: 1100px;
+		margin: 100px auto;
+	
+		text-align: center;
+
+	}
+	
+	
+
+	#services>ul>li{
+		list-style: none;
+		width:300px ;
+		height: 350px;
+		overflow: hidden;
+		float: left;
+		margin-left: 40px;
+		line-height: 
+	}
+	#services>ul>li>h3{
+		line-height: 2.5;
+		margin-bottom: 20px;
+	}
+	#services>ul>li>p{
+		color: gray;
+	}
+	.services-content{
+		padding-top: 30px;
+	}
+	#services:after{
+		content: '';
+		display: block;
+		clear: both;
+	}
+/*food*/
+#food{
+	text-align: center;
+	width: 1100px;
+	margin: 0 auto;
+	padding-bottom: 100px;
+
+}
+#food>ul{
+	padding-top: 100px;
+	margin-left: -12px;
+	line-height: 2;
+}
+#food>ul>li>p{
+	font-style: italic;
+	color: gray;
+}
+#food>ul>li{
+	list-style: none;
+	float: left;
+	margin-left: 20px;
+	margin-top: 40px;
+}
+#food>ul li a{
+	text-decoration: none;
+	position: relative;
+	display: block;
+	width: 350px;
+	height: 300px;
+}
+#food>ul li img{
+	width: 350px;
+	height: 300px;
+	border: 1px solid #f1f1f1;
+	overflow: hidden;
+}
+
+#listhover {
+    position: absolute;
+    top: 0;
+    left: 0;
+   width: 350px;
+   height: 300px;
+ 	vertical-align: middle;
+    transition: all ease .5s;
+    opacity: 0;
+    background: rgba(254, 209, 54, .9);
+    text-align: center;
+    line-height: 300px;
+}
+#listhover>i{
+	background: transparent;
+}
+#listhover:hover{
+	opacity: 0.7;
+}
+
+
+
+
+#food:after{
+	content: '';
+	display: block;
+	clear: both;
+}
+/*about*/
+#about{
+	text-align: center;
+	padding-bottom: 125px;
+	position: relative;
+}
+#about img{
+	width: 156px;
+	height: 156px;
+	border-radius: 50%;
+	border: 1px solid #f1f1f1;
+
+}
+ol{
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+.timeline{
+	max-width: 1140px;
+	margin: 0 auto;
+	margin-top: 57px;
+}
+.timeline>li{
+	position: relative;
+	padding: 0 0 125px 0;
+	
+}
+.timeline>li>.summary{
+	position: absolute;
+	right: 50%;
+	top: 0;
+	margin-right: 100px;
+	text-align: right;
+	width: 30em;
+
+}
+.timeline>li:nth-child(even)>.summary{
+	position: absolute;
+	left: 50%;
+	margin-left: 100px;
+	text-align: left;
+	
+}
+.timeline>li:last-child{
+	padding-bottom: 0;
+}
+.timeline>li::after{
+	content: '';
+	display: block;
+	position: absolute;
+	left: 50%;
+	top: 0;
+	border-left: 2px solid pink;
+	margin-left: 1px;
+	height: 100%;
+	z-index: -3;
+}
+.summary>time,.summary>h2{
+	font-weight: bold;
+	font-size: 24px;
+}
+.summary>p{
+	color: gray;
+	line-height: 1.5;
+}
+ 
+.part{
+	width: 154px;
+	height: 154px;
+	border: 1px solid #f1f1f1;
+	margin: 0 auto;
+	background: #fed136;
+	color: #f1f1f1;
+	border-radius: 50%;
+	position: relative;
+
+	
+}
+.part-title{
+	position: absolute;
+	font-size: 20px;
+	left: 50%;
+	top: 50%;
+	margin-top: -35px;
+	margin-left:-35px;
+
+}
+/*taam*/
+#team{
+	width: 1000px;
+	margin: 0 auto;
+	text-align: center;
+	padding: 300px 0;
+	
+}
+ #team img{
+ 	width: 200px;
+ 	height: 200px;
+ 	overflow: hidden;
+ 	border-radius: 50%;	
+ }
+ #team ul li{
+
+ 	padding: 0;
+ 	list-style: none;
+ }
+ #team .teamers{
+ 	width: 100%;
+ 	
+ 	margin: 50px 0px;
+ }
+ .teamers>li{
+ 	float: left;
+
+ 	margin-left: 100px;
+ 
+
+ }
+ .teamers p{
+ 	color: gray;
+ 	line-height: 2;
+ }
+ #team>ul::after{
+ 	content: '';
+ 	display: block;
+ 	clear: both;
+ }
+ #team>p{
+
+ 	color: gray;
+ }
+ /*contact*/
+ #contact{
+ 	background: black;
+ }
+ .contact-content{
+ 	padding: 50px 0;
+ 	width: 1100px;
+ 	margin: 0 auto;
+ 	text-align: center;
+ }
+ .contact-content>h1{
+ 	color: #f1f1f1;
+ }
+.message{
+	margin-top: 80px;
+}
+.message>input{
+	display: block;
+	width: 500px;
+	height: 60px;
+	border-radius: 5px;
+	margin-top: 20px;
+
+}
+.message>textarea{
+
+	width: 520px;
+	height: 235px;
+	float: right;
+	border-radius: 5px;
+	font-size: 18px;
+	padding: 20px;
+	
+}
+.message>button{
+	display: block;
+	width: 300px;
+	height: 80px;
+	margin: 0 auto;
+	background: #fed136;
+	border-color: #fed136;
+	color: #fff;
+	border-radius: 5px;
+	font-size: 24px;
+}
+.message>button:hover{
+	background: yellow;
+}
+/*footer*/
+
+#footer{
+	width: 1000px;
+	/*height: 120px;*/
+
+	margin: 0 auto;
+	display: flex;
+   justify-content: space-around;
+   align-items: center;
+   text-align: center;
+
+}
+
+	#footer>.flex{
+  /*记住，在IE10和其他老版本浏览中要使用其他版本的规范 */
+ 	width: 260px;
+
+ 	
+
+}
+.footer-copy{
+	color: #333;
+	font-size: 14px;
+}
+#footer>.icon>a{
+	text-decoration: none;
+	display: inline-block;
+	padding-top: 20px ;
+}
+
+#footer>.href>a{
+	text-decoration: none;
+	color: #fed136;
+	display: inline-block;
+	padding-right: 20px;
+}
+
+#footer>.href>a:hover{
+	color:yellow;
+	text-decoration: underline;
+}
+li a i:hover,#footer>.icon>a>i:hover{
+  background:yellow;
+}
+/*加载更多*/
+   .wrap{
+    	
+      width: 1000px;
+      margin: 0 auto;
+      text-align: center;
+  	
+    }
+
+    .img-row {
+      margin-bottom: 20px;
+     
+    }
+
+    .img-row:after {
+      content: "";
+      display: block;
+      clear: both;
+    }
+
+    .img-box {
+	 margin-left: 3px;
+	 margin-right: 3px;
+      float: left;
+  
+    }
+
+    .img-line .img-box:first-child {
+      padding-left: 0;
+    }
+   #load{
+            width: 100px;
+            height: 40px;
+            line-height: 40px;
+            text-align: center;
+            border: 1px solid #ccc;
+           
+            background: #fed136;
+            margin-top: 20px;
+            cursor:pointer;
+            display: inline-block;
+            color: #f1f1f1;
+
+        }
+
+/*返回顶部*/
+.ct{
+	width: 100px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    border: 1px solid #ccc;
+   
+    background: #fed136;
+    margin-top: 20px;
+    cursor:pointer;
+    display: inline-block;
+    color: #f1f1f1;
+	position: fixed;
+	bottom: 30px;
+	right: 30px;
+}
+
+</style>
+<body>
+	<div id="header">
+		<div class="nav">
+			<li><a href="#">SERVICES</a></li>
+			<li><a href="#">PORTFOLIO</a></li>
+			<li><a href="#">ABOUT</a></li>
+			<li><a href="#">TEAM</a></li>
+			<li><a href="#">CONTACT</a></li>
+			<a class="nav-h">Start Project</a>
+		</div>
+		<div class="nav-name">
+			<h2>Welcome To Our Studio!</h2>
+			<h1>IT'S NICE TO MEET YOU</h1>
+			<a href="#">TELL ME MORE</a>
+		</div>
+	</div>
+	<div id="services">
+			<h1 class="titles">SERVICES</h1>
+			<p class="titles-explain">Lorem ipsum dolor sit amet consectetur.</p>
+		<ul class="services-content">
+			<li>
+				<div class="circle">
+					<i  class="iconfont1">&#xe600</i>
+				</div>
+				<h3>E-Commerce</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
+			</li>
+			<li>
+				<div class="circle">
+					<i class="iconfont2">&#xe612</i>
+				</div>
+				
+				<h3>Responsive Design</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
+			</li>
+			<li>
+				<div class="circle">
+					<i class="iconfont3">&#xe600</i>
+				</div>
+				<h3>Web Security</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
+			</li>
+		</ul>
+	</div>
+
+	<div id="food">
+		<h1 class="titles">PORTFOLIO</h1>
+		<p class="titles-explain">Lorem ipsum dolor sit amet consectetur.</p>
+		<ul>
+			<li>
+				<a href="#"><img src="https://cdn.pixabay.com/photo/2017/09/22/22/33/tomato-2777351__340.jpg" alt="">
+				<div id="listhover">
+					<i class="iconfont7">&#xe6c8</i>
+				 </div>
+				</a>
+				
+				<h3>Round Icons</h3>
+				<p>Graphic Design</p>
+			</li>
+			<li>
+				<a href="#"><img src="https://cdn.pixabay.com/photo/2017/12/29/18/47/turkey-3048299__340.jpg" alt="">
+				<div id="listhover">
+					<i class="iconfont7">&#xe6c8</i>
+				 </div>
+				 </a>
+				<h3>Startup Framework</h3>
+				<p>Website Design</p>
+			</li>
+			<li>
+				<a href="#"><img src="https://cdn.pixabay.com/photo/2017/12/31/04/12/mushroom-3051519__340.jpg" alt="">
+				<div id="listhover">
+					<i class="iconfont7">&#xe6c8</i>
+				 </div>
+				</a>
+				<h3>Treehouse</h3>
+				<p>Website Design</p>
+			</li>
+			<li>
+				<a href="#"><img src="https://cdn.pixabay.com/photo/2017/12/22/11/09/schilthorn-3033448__340.jpg" alt="">
+				<div id="listhover">
+					<i class="iconfont7">&#xe6c8</i>
+				 </div>
+				</a>
+				<h3>Golden</h3>
+				<p>Website Design</p>
+			</li>
+			<li>
+				<a href="#"><img src="https://cdn.pixabay.com/photo/2015/06/22/08/37/children-817365__340.jpg" alt="">
+					<div id="listhover">
+					<i class="iconfont7">&#xe6c8</i>
+				 </div>
+				</a>
+				<h3>Escape</h3>
+				<p>Website Design</p>
+			</li>
+			<li>
+				<a href="#"><img src="https://cdn.pixabay.com/photo/2016/11/30/15/23/apple-1873078__340.jpg" alt="">
+				<div id="listhover">
+					<i class="iconfont7">&#xe6c8</i>
+				 </div>
+				</a>
+				<h3>Dreams</h3>
+				<p>Website Design</p>
+			</li>
+		</ul>
+	</div>
+	<!-- 加载更多 -->
+	<div class="wrap">
+	<div class="img-preview">
+		
+ 	 </div>
+  <div id="load">加载更多</div>
+</div>
+<!-- about -->
+	<div id="about">
+		<h1 class="titles">ABOUT</h1>
+		<p class="titles-explain">Lorem ipsum dolor sit amet consectetur.</p>
+		<ol class="timeline">
+			<li>
+				<img src="https://cdn.pixabay.com/photo/2017/10/02/21/56/chestnut-2810489__340.jpg" alt="">
+				<div class="summary">
+					<time >2009-2011</time>
+					<h2>Our Humble Beginnings</h2>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p>
+				</div>
+			</li>
+
+			<li>
+				<img src="https://cdn.pixabay.com/photo/2017/09/16/16/08/sea-2755907__340.jpg" alt="">
+				<div class="summary">
+					<time >2009-2011</time>
+					<h2>Our Humble Beginnings</h2>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p>
+				</div>
+			</li>
+
+			<li>
+				<img src="https://cdn.pixabay.com/photo/2017/08/30/17/12/waffle-heart-2697904__340.jpg" alt="">
+				<div class="summary">
+					<time >2009-2011</time>
+					<h2>Our Humble Beginnings</h2>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p>
+				</div>
+			</li>
+
+			<li>
+				<img src="https://cdn.pixabay.com/photo/2017/10/04/21/36/fly-agaric-2817723__340.jpg" alt="">
+				<div class="summary">
+					<time >2009-2011</time>
+					<h2>Our Humble Beginnings</h2>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p>
+				</div>
+			</li>
+		</ol>
+	</div>
+	<!-- 黄色背景圆圈 -->
+	<div class="part">
+		<div class="part-title">
+			<span>BE PART </span><br>
+			<span>OF OUR </span><br>
+			<span>STORY!</span>
+		</div>	
+	 </div>
+	 <div id="team">
+	 	<h1 class="titles">OUR AMAZING TEAM</h1>
+		<p class="titles-explain">Lorem ipsum dolor sit amet consectetur.</p>
+		<ul class="teamers">
+			<li >
+				<img src="https://cdn.pixabay.com/photo/2017/01/04/21/00/new-years-eve-1953253__340.jpg" alt="">
+				<h4>Kay Garland</h4>
+				<p>Lead Designer</p>
+				<a href="#"><i class="iconfont4 circle1 ">&#xe64e</i></a>
+				<a href="#"><i class="iconfont5 circle1">&#xe601</i></a>
+				<a href="#"><i class="iconfont6 circle1 ">&#xe677</i></a>
+			
+			</li>
+
+			<li >
+				<img src="https://cdn.pixabay.com/photo/2017/09/30/15/10/pizza-2802332__340.jpg" alt="">
+				<h4>Larry Parker</h4>
+				<p>Lead Marketer</p>
+				<a href="#"><i class="iconfont4 circle1 ">&#xe64e</i></a>
+				<a href="#"><i class="iconfont5 circle1">&#xe601</i></a>
+				<a href="#"><i class="iconfont6 circle1 ">&#xe677</i></a>
+			</li>
+
+			<li >
+				<img src="https://cdn.pixabay.com/photo/2017/09/26/16/32/autumn-2789234__340.jpg" alt="">
+				<h4>Diana Pertersen</h4>
+				<p>Lead Developer</p>
+				<a href="#"><i class="iconfont4 circle1 ">&#xe64e</i></a>
+				<a href="#"><i class="iconfont5 circle1">&#xe601</i></a>
+				<a href="#"><i class="iconfont6 circle1 ">&#xe677</i></a>
+				 
+			</li>
+		</ul>
+		
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut eaque, laboriosam veritatis, quos non quis ad perspiciatis, totam corporis ea, alias ut unde.</p>
+	 </div>
+	<!-- contact -->
+	<div id="contact">
+		<div class="contact-content">
+			<h1 class="titles">CONTACT US</h1>
+		    <p class="titles-explain">Lorem ipsum dolor sit amet consectetur.</p>
+		
+		    <form class="message">
+
+		    <textarea placeholder="YOUR MESSAGE*"></textarea>
+			<input type="text" name=""  placeholder="YOUR NAME*">
+			<br>
+			<input type="text" name="" placeholder="YOUR EMAIL*">
+			<br>
+			<input type="text" name="" placeholder="YOUR PHONE*">
+			<br>
+			<button type="submit">Send Message</button>
+		</form>
+		</div>	
+	</div>
+	<!-- footer -->
+	<div  id="footer">
+	
+		<div class="flex"><span class="footer-copy">Copyright © Your Website 2014</span></div>
+        <div class="flex icon">
+            <a href="#" class="footer-icon "><i class="iconfont4 circle1 ">&#xe64e</i></a>
+            <a href="#" class="footer-icon "><i class="iconfont5 circle1">&#xe601</i></a>
+            <a href="#" class="footer-icon "><i class="iconfont6 circle1 ">&#xe677</i></a>
+        </div>
+        <div class="flex href">
+            <a href="#" >Privacy Policy</a>
+            <a href="#" >Terms of Use</a>
+        </div>
+</div>
+<!-- 返回顶部 -->
+<div class="ct">
+    <!-- <div class="go-top">返回顶部</div> -->
+    返回顶部
+ </div>
+<!-- 加载更多木桶布局 -->
+<script src="jquery.min.js"></script>
+ <script>
+
+
+  function Barrel($ct){
+    this.$ct = $ct;
+    this.rowList = [];
+    this.loadImg();
+  }
+
+  Barrel.prototype = {
+    loadImg: function(){
+      var _this = this;
+      var imgs = this.getImgUrls(10);
+      for(var i=0; i<imgs.length; i++){
+        var img = new Image();
+        // console.log(img)
+        img.src = imgs[i];
+        img.onload = function(){
+          var imgInfo = {
+            target : this,
+            width: 300* (this.width/this.height),
+            height: 300
+          };
+
+          _this.render(imgInfo);
+        }
+      }
+      //
+    },
+    // 页面渲染
+    // 一张一张加进来的
+    render: function(imgInfo){
+
+      var clientWidth = this.$ct.width();
+      var rowWidth = 0;
+      var newRowHeight = 0;
+      var lastImgInfo = imgInfo;
+
+      this.rowList.push(imgInfo);
+      console.log(this.rowList.length)
+      for(var i=0; i< this.rowList.length; i++){
+      	console.log(this.rowList[i].width)
+         rowWidth = rowWidth + this.rowList[i].width;   
+      }
+      console.log(rowWidth)
+      console.log(clientWidth)
+      // 当前图片大于可视窗口宽度的时候  开始去摆放这一排图片
+      if(rowWidth > clientWidth){
+      	 
+        this.rowList.pop();
+        // 调整图片宽度
+
+        // 图片的宽度会随着高度改变而等比改变  所以如果
+        // 想要图片充满整个空间  只需要让图片的高度等比放大就好
+        // 
+        newRowHeight = clientWidth*300/(rowWidth-imgInfo.width)-10;
+        //   rowWidth/300   ==  clientWidth/ X
+        console.log(this.rowList)
+        this.layout(newRowHeight);
+        this.rowList = [];
+        this.rowList.push(imgInfo);
+      }
+      
+    },
+    // 摆放图片
+
+    layout: function(newRowHeight){
+      console.log('createRow');
+      var $rowCt = $('<div class="img-row"></div>');
+      $.each(this.rowList, function(idx, imgInfo){
+        var $imgCt = $('<div class="img-box"></div>'),
+            $img = $(imgInfo.target);
+            $img.height(newRowHeight);
+            console.log("高度"+$img.height())
+            $img.width()
+            $imgCt.append($img);
+            $rowCt.append($imgCt);
+      });
+      console.log(this.$ct[0])
+      this.$ct.append($rowCt);
+    },
+// 获得图片
+    getImgUrls: function(num) {
+      var width, height, urls = [];
+      for (var i = 0; i < num; i++) {
+        width = Math.floor(Math.random() * 100 +200);
+        height = 300
+        urls.push("https://picsum.photos/"+width+'/'+height+'?random')
+      }
+      return urls;
+    }
+  }
+
+ new Barrel($('.img-preview'));
+// 点击加载更多
+let $load=$('#load')
+$load.on('click',function(e){
+  e.preventDefault()
+  new Barrel($('.img-preview'));
+})
+// 返回顶部
+ // function GoTop(ct){
+ //        this.ct = ct
+ //        // this.target = this.createNode(this.ct)
+ //        this.bindEvent(this.target)
+ //    }
+ //    GoTop.prototype = {
+ //    //     createNode: function(box){
+ //    //         var node = document.createElement('div')
+ //    //         node.classList.add('go-top')
+ //    //         node.innerText = '返回顶部'
+ //    //         box.appendChild(node)
+
+ //    //         return node
+ //    //     },
+ //        bindEvent: function (e) {
+ //            console.log(e)
+ //            e.addEventListener('click', function () {
+ //                window.scroll(0, 0)
+ //            })
+ //        }
+ //    }
+    
+    let $ct=$('.ct')
+    $ct.on('click',function(e){
+    	window.scroll(0,0)
+    })
+
+    
+
+  </script>		
+	
+</body>
+</html>
