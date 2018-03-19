@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<style type="text/css">
+		.content{
+			position: relative;
+
+		}
+
+		.item{
+			position: absolute;
+			width: 400px;
+			margin-right: 10px;
+			margin-top: 10px;
+			transition: all 1s;
+			overflow: hidden;
+		}
+
+
+		</style>
+
+
+	</head>
+	<body>
+		<div class="content">
+			<div class="item">
+				<img src="https://picsum.photos/400/800" alt="">
+			</div>
+			<div class="item">
+				<img src="https://picsum.photos/400/600" alt="">
+			</div>
+			<div class="item">
+				<img src="https://picsum.photos/400/300" alt="">
+			</div>
+			<div class="item">
+				<img src="https://picsum.photos/400/700" alt="">
+			</div>
+		<div class="item">
+				<img src="https://picsum.photos/400/400" alt="">
+			</div>
+		<div class="item">
+				<img src="https://picsum.photos/400/500" alt="">
+			</div>
+	
+		
+		</div>
+	<script src="jquery-3.3.1.min.js"></script>
+		<script type="text/javascript">
+		function appendHtml(){
+		var number=Random(100,500)
+		var link='https://picsum.photos/400/'+number
+		var img='<img src=' +link+ '>'
+		$div=$("<div></div>")
+		$div.addClass("item")
+		$div.append(img)
+		$('.content').append($div)
+		console.log($div)
+    }
+    // 产生100-500之间的随机数
+	    function Random(a,b){
+	    	return a+Math.floor(Math.random()*(b-a))
+	    }
+
+	    var timer=setInterval(function(){
+	    	appendHtml()
+	    	waterfull()
+	    },500)
+	
+
+		
+		waterfull()
+
+		$(window).resize(function(){
+			waterfull()
+		})
+
+		function waterfull(){
+			var colLength = parseInt($('.content').width()/$('.item').width())
+			var itemArr = []
+			for(var i = 0; i < colLength; i++) {
+				itemArr[i] = 0
+			}
+
+			$('.item').each(function(){
+				var minValue = Math.min.apply(null, itemArr)
+				var minIndex = itemArr.indexOf(minValue)
+
+				$(this).css({
+					top: itemArr[minIndex],
+					left: $(this).outerWidth(true) * minIndex
+				})
+
+				itemArr[minIndex] += $(this).outerHeight(true)
+
+			})		
+		}
+		 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		// var WaterFall = (function(){
+			// function init(){
+			// 	waterfull()
+			// 	$(window).resize(function(){
+			// 		waterfull()
+			// 	})
+			// }
+
+			// function waterfull(){
+			// 	var colLength = parseInt($('.content').width()/$('.item').outerWidth(true))
+			// 	var itemArr = []
+			// 	for(var i = 0; i < colLength; i++) {
+			// 		itemArr[i] = 0
+			// 	}
+
+			// 	$('.item').each(function(){
+			// 		var minValue = Math.min.apply(null, itemArr)
+			// 		var minIndex = itemArr.indexOf(minValue)
+
+			// 		$(this).css({
+			// 			top: itemArr[minIndex],
+			// 			left: $(this).outerWidth(true) * minIndex
+			// 		})
+
+			// 		itemArr[minIndex] += $(this).outerHeight(true)
+
+			// 	})		
+			// }
+			
+		// 	return {
+		// 		init: 1
+		// 	}
+		// })()
+
+	
+
+
+
+	// var WaterFall = (function(){		
+			
+	// 		var ret =  { init: 1 }
+	// 		return ret
+	// 	})()
+
+
+
+
+
+
+		</script>
+	</body>
+</html>

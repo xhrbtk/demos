@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>简历</title>
+</head>
+<style>
+ *{
+    margin: 0;
+    padding: 0;
+   }
+    body{
+        font: 15px/1.8 sans-serif;
+        color: #333;
+        background: #ccc;
+        margin-top: 0px;
+    }
+
+ /*添加加号图标*/
+@font-face {
+  font-family: 'iconfont';  /* project id 484539 */
+  src: url('//at.alicdn.com/t/font_484539_3spacn1z2ea2x1or.eot');
+  src: url('//at.alicdn.com/t/font_484539_3spacn1z2ea2x1or.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_484539_3spacn1z2ea2x1or.woff') format('woff'),
+  url('//at.alicdn.com/t/font_484539_3spacn1z2ea2x1or.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_484539_3spacn1z2ea2x1or.svg#iconfont') format('svg');
+}
+.iconfont{
+    font-family:"iconfont" !important;
+    font-style:normal;
+    -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  position: absolute;
+
+  left: 0px;
+}
+    #wrap{
+        width: 700px;
+      
+      
+        margin: 0 auto;
+        background: #fff;
+         padding: 80px;
+    }
+    /*header*/
+    #header{
+        width: 100%;
+        height: 150px;
+    
+        position: relative;
+        
+    }
+    .name{
+        width: 100px;
+        height: 100px;
+        background: black;
+        text-align: center;
+        border-radius: 50%;
+        position: relative;
+        color: #fff;
+
+    }
+    .name>span{
+        position:absolute;
+        line-height: 100px;
+        font-size: 24px;
+    }
+    .name::after{
+        content: '';
+        display: inline-block;
+        width: 60px;
+        border-bottom: 2px solid;
+         transform:  rotateZ(130deg);
+         position: absolute;
+         top: 50px;
+         left: 20px;
+      
+    }
+    .name>span:nth-child(1){
+        left: 25px;
+        top: -20px;
+    }
+    .name>span:nth-child(2){
+        left: 65px;
+        top: 10px;
+    }
+
+
+    .intro{
+        width: 200px;
+        height: 100px;
+        position:absolute;
+        top: 0;
+        left: 130px;
+    }
+    
+    .intro>p{
+        font-weight: bold;
+        line-height: 2;
+    }
+    
+    .contacts{
+        width: 300px;
+        position: absolute;
+        right: 0px;
+        top: 0px;
+    }
+    .contacts::before{
+        content: '';
+        display: inline-block;
+        width: 270px;
+        border-bottom: 2px solid;
+         position: absolute;
+         top: 30px;
+    }
+   
+    .contacts>p>span{
+        font-weight: bold;
+
+    }
+    .strong{
+        font-weight: bold;
+        font-size: 20px;
+    }
+   /*work experience*/
+    .work{
+       
+       /* border: 1px solid red;*/
+        position: relative;
+        margin-top: 30px;
+     
+
+    }
+    .work>h2{
+        font-size: 20px;
+    padding-bottom: 6px;
+    border-bottom: 1px solid #ccc;
+    width: 40%;
+
+    }
+    .extra>h2{
+         font-size: 20px;
+    padding-bottom: 6px;
+    border-bottom: 1px solid #ccc;
+    width: 100%;
+
+    }
+    .work ul,li{
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+   /* #work >ul{
+        
+        padding-left: 100px;
+    }*/
+   
+    .work>ul>li{
+        border-left: 1.5px solid;
+        padding-left: 100px;
+
+    }
+    
+    .work-color{
+     color: #b3afaf;
+}
+
+    .work>ul>li:before {
+    content: '';
+    border: 7px solid;
+    border-radius: 50%;
+    display: inline-block;
+    position: absolute;
+    left: -6px;
+}
+/*footer*/
+#footer{
+    width: 100%;
+}
+.extra{
+    width: 340px;
+    height: 100%;
+  
+}
+.skills{
+    width: 320px;
+    height: 100%;
+    float: right;
+}
+.clear::after{
+    content: '';
+    display: block;
+    height: 0;
+    clear: both;
+}
+.skills>h2{
+    font-size: 20px;
+     padding-bottom: 6px;
+    border-bottom: 1px solid #ccc;
+    width: 100%;
+}
+.extra>ul,li{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.extra>ul>li{
+    /*border-left: 1.5px solid;*/
+        padding-left: 100px;
+        padding-top: 20px;
+        position: relative;
+}
+/*添加加号图标*/
+
+ .skill-right{
+    float: right;
+ }
+ .skill-left,.skill-right{
+    padding-top: 20px;
+ }
+ .skill-left>li,.skill-right>li{
+    padding-bottom: 40px;
+    padding-left: 20px;
+    position: relative;
+ 
+ }
+
+ .icon{
+    font-family:"iconfont" !important;
+    font-style:normal;
+    -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  position: absolute;
+    left: 0px;
+    top: 0px;
+ 
+}
+ .icon1{
+    font-family:"iconfont" !important;
+    font-style:normal;
+    -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  position: absolute;
+    left: 0px;
+
+ 
+}
+
+</style>
+<body>
+    <div id=wrap>
+        <div id="header">
+            <div class="name">
+                <span>D</span>
+                <span>S</span>
+            </div>
+            <div class="intro">
+               <h2>David Smith</h2>
+               <p>Graphic&Web Designer</p> 
+            </div>
+            <div class="contacts">
+                <span class="strong">Contacts</span>
+                <p><span>A</span> 59  somewhere street</p>
+                <p><span>M</span> 12346788999</p>
+                <p><span>E</span> steve@gmail.com</p>
+                <p><span>B</span>  www.behance.net/design</p>
+            </div>
+        </div>
+        <!-- work experience -->
+        <div class="work">
+            <h2>WORK EXPERIENCE</h2>
+            <ul>
+                <li>
+                    <h3>Marketplaces/<span class="work-color">2012-2013</span></h3>
+                    <p>Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum.Typi non habent charitatem insitam;est usus legentis in iis qui facit.Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum.</p>
+                </li>
+                <li>
+                    <h3>Apple Inc/<span class="work-color">2013-2014</span></h3>
+                    <p>Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum.Typi non habent charitatem insitam;est usus legentis in iis qui facit.Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum.</p>
+                </li>
+                <li>
+                    <h3>Aroma Bar Network /<span class="work-color">2014-now</span></h3>
+                    <p>Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum.Typi non habent charitatem insitam;est usus legentis in iis qui facit.Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum.</p>
+                </li>
+            </ul>
+        </div>
+        <!-- education -->
+        <div class="work">
+            <h2>EDUCATION</h2>
+            <ul>
+                <li>
+                    <h3>College/<span class="work-color">2008-2011</span></h3>
+                    <h3 class="work-color">Visual Design Communication</h3>
+                    <p>Duis autem vel eum iriure door in hendrerit in vulputate velit esse molestie consequat ,vel illum dolore eu feugiat nulla facilisis at vero.Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse.</p>
+
+                </li>
+                <li>
+                    <h3>University /<span class="work-color">2011-2014</span></h3>
+                    <h3 class="work-color">Information System</h3>
+                    <p>Duis autem vel eum iriure door in hendrerit in vulputate velit esse molestie consequat ,vel illum dolore eu feugiat nulla facilisis at vero.Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse.</p>
+                </li>
+               
+            </ul>
+        </div>
+<!-- footer -->
+        <div id="footer">
+            <div class="skills clear">
+                <h2>PROFESIONAL SKILLS</h2>
+                <ul class="skill-right">
+                    
+                    <li>
+                    HTML & CSS
+                         <i class="icon">&#xe61b</i>
+                    </li>
+                   
+                    <li>JAVASCRIPT
+                    <i class="icon">&#xe61b</i></li>
+                    
+                    <li>SLIM
+                     <i class="icon">&#xe61b</i></li>
+                   
+                </ul>
+                <ul class="skill-left">
+                    
+                    <li>JQUERY
+                    <i class="icon1">&#xe61b</i></li>
+                    
+                    <li>PHOTOSHOP
+                     <i class="icon1">&#xe61b</i></li>
+                   
+                    <li>ILLUSTRATOR
+                    <i class="icon1">&#xe61b</i></li>
+                    
+                </ul>
+            </div>
+            <div class="extra">
+                <h2>EXTRA CURRICULAR ACTIVITIES</h2>
+                <ul>
+                    <li>
+                        <i class="iconfont">&#xe61b</i>
+                        <p>Volunteer</p>
+                        <p>Claritas estiam processus dynamicus,qui sequitur mutation em lectorm</p>
+                    </li>
+                    <li>
+                        <i class="iconfont">&#xe61b</i>
+                       <p>Volunteer</p>
+                        <p>Claritas estiam processus dynamicus,qui sequitur mutation em lectorm</p>
+                    </li>
+                </ul>
+
+            </div>
+          
+
+        </div>
+    </div>
+</body>
+</html>
