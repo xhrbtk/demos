@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>伪类元素</title>
+</head>
+<style>
+	/*.tooltip,*/
+	.bubble,.bubble1,.bubble2{
+		position: relative;
+		width: 50px;
+		height: 50px;
+		padding: 10px;
+		background: #fff;
+		border: 1px solid ;
+		display: inline-block;
+		top: 25px;
+
+	}
+/*	.tooltip .caret,*/
+	.bubble:before{
+		content: '';
+		width: 0px;
+		height: 0px;
+		display: inline-block;
+		border-top: 5px solid transparent;
+		border-right: 5px solid transparent;
+		border-bottom: 5px solid red;
+		border-left: 5px solid transparent;
+		position: absolute;
+		top: -10px;
+	}
+	.bubble1:before{
+		content: '';
+		width: 0px;
+		height: 0px;
+		display: inline-block;
+		border-top: 5px solid green;
+		border-right: 5px solid green;
+		border-bottom: 5px solid transparent;
+		border-left: 5px solid transparent;
+		position: absolute;
+		top: -1px;
+		right: 0px;
+	}
+		.bubble2:before{
+		content: '';
+		width: 5px;
+		height: 5px;
+		border-left: 1px solid #000;
+		border-top: 1px solid #000;
+		background: #fff;
+		position: absolute;
+		top: -4px;
+		display: inline-block;
+		transform:rotateZ(45deg) ;
+
+	}
+
+
+	
+</style>
+<body>
+	<div class="bubble"></div>
+	<div class="bubble1"></div>
+	<div class="bubble2"></div>
+</body>
+</html>

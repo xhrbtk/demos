@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<style>
+	*{
+		margin: 0;
+		padding: 0;
+
+	}
+	ul,li{
+		list-style: none;
+	}
+	a{
+		text-decoration: none;
+
+	}
+	.cate-title{
+		color: #fff;
+	}
+	.nav{
+		width:250px ;
+		height: 250px;
+		border: 1px solid red;
+		background: #c7171e;
+		padding-left: 10px;
+		
+	}
+	.nav-aside{
+		width:240px ;
+		/*border: 1px solid green;*/
+	}
+	.category{
+		width: 220px;
+		 border-bottom: 1px dotted #de272e;
+	/*	display: block;*/
+		 position: relative;
+
+	}
+	.cate-title{
+		display: inline-block;
+		/*border-bottom: 1px dotted #de272e;*/
+		width: 200px;
+		padding: 13px 0;
+		
+	}
+	.icon-goto{
+		color: #fff;
+
+	}
+	.child-panel{
+		position: absolute;
+		top: 13px;
+		left: 252px;
+		width: 230px;
+	
+		border: 1px solid #ccc;
+		
+		display: none;
+	}
+	.child-panel>li{
+		padding: 10px 40px;
+		float: left;
+	}
+	.child-panel>li>a{
+		color: black;
+		font-size: 10px;
+	}
+	 .nav-aside .category.hover .child-panel{
+        display: block;
+    }
+</style>
+<body>
+	<div class="nav">
+		<ul class="nav-aside">
+			<li class="category">
+				<a class="cate-title" href="#">珠宝玉器</a>
+                <span class="icon-goto">></span>
+                <ul class="child-panel">
+                    <li><a href="">翡翠</a></li>
+                    <li><a href="">玉石</a></li>
+                    <li><a href="">宝石</a></li>
+                    <li><a href="">水晶</a></li>
+                    <li><a href="">玛瑙</a></li>
+                    <li><a href="">珍珠</a></li>
+                    <li><a href="">钻石</a></li>
+                    <li><a href="">琥珀</a></li>
+                    <li><a href="">和田</a></li>
+                    <li><a href="">琥珀</a></li>
+                </ul>
+			</li>
+			<li class="category">
+				 <a class="cate-title" href="#">珠宝玉器</a>
+                <span class="icon-goto">></span>
+                <ul class="child-panel ">
+                    <li><a href="">翡翠</a></li>
+                    <li><a href="">玉石</a></li>
+                    <li><a href="">宝石</a></li>
+                    <li><a href="">水晶</a></li>
+                    <li><a href="">玛瑙</a></li>
+                    <li><a href="">珍珠</a></li>
+                </ul>
+			</li>
+			<li class="category">
+				 <a class="cate-title" href="#">珠宝玉器</a>
+                <span class="icon-goto">></span>
+                <ul class="child-panel">
+                    <li><a href="">翡翠</a></li>
+                    <li><a href="">玉石</a></li>
+                    <li><a href="">宝石</a></li>
+                    <li><a href="">水晶</a></li>
+                </ul>
+			</li>
+			<li class="category">
+				<a class="cate-title" href="#">珠宝玉器</a>
+                <span class="icon-goto">></span>
+                <ul class="child-panel">
+                    <li><a href="">翡翠</a></li>
+                    <li><a href="">玉石</a></li>
+                    <li><a href="">宝石</a></li>
+                    <li><a href="">水晶</a></li>
+                    <li><a href="">玛瑙</a></li>
+                    <li><a href="">珍珠</a></li>
+                </ul>
+			</li>
+			<li class="category">
+				   <a class="cate-title" href="#">珠宝玉器</a>
+                	<span class="icon-goto">></span>
+                <ul class="child-panel">
+                    <li><a href="">翡翠</a></li>
+                    <li><a href="">玉石</a></li>
+                    <li><a href="">宝石</a></li>
+                    <li><a href="">水晶</a></li>
+                </ul>
+			</li>
+		</ul>
+	</div>
+	<script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+	<script>
+		//划入  添加class：hover
+		$('.category ').on('mouseenter',function(){
+			var $this=$(this)
+			$this.addClass('hover').siblings().removeClass('hover')
+		})
+
+		$('.category ').on('mouseleave',function(){
+			var $this=$(this)
+			$this.removeClass('hover')
+		})
+	</script>
+</body>
+</html>

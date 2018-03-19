@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>MYToDo--List</title>
+		<link rel="stylesheet" type="text/css" href="css/normalize.css" />
+		<link rel="stylesheet" type="text/css" href="css/jquery.datetimepicker.min.css" />
+		<link rel="stylesheet" type="text/css" href="css/base.css" />
+	</head>
+
+	<body>
+		<div class="contatiner">
+			<!--总容器开始-->
+			<h1>MyToDo</h1>
+			<form class="add-task" action="javascript: return false">
+				<!--form表单-->
+				<input type="text" class="content" />
+				<button class="addTaskSubmit">submit</button>
+			</form>
+			<div class="task-list">
+				<!--任务列表-->
+				
+			</div>
+		</div>
+
+		<div class="task-detail">
+			<input type="text" class="detail-content" />
+			<span style="font-size: 16px;color:white;"> 备注</span>
+			<textarea class="desc"></textarea>
+			<span style="font-size: 16px;color:white;"> 设置闹钟</span>
+			<input type="text" class="datetime" />
+			<button class="detail-submit">提交</button>
+		</div>
+		<!--jquery-->
+		<script src="js/jquery.js" type="text/javascript" charset="utf-8"></script>
+		<!--datetimepicker-->
+		<script src="js/jquery.datetimepicker.full.js" type="text/javascript" charset="utf-8"></script>
+		<!--store.js-->
+		<script src="js/store.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/base.js" type="text/javascript" charset="utf-8"></script>
+	</body >
+
+</html>
+

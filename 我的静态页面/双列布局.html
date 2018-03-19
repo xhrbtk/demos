@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>两列布局</title>
+</head>
+<style>
+	*{
+		margin: 0;
+		padding: 0;
+	}
+	.container{
+		width: 800px;
+		height: 800px;
+		margin: 0 auto;
+		border: 1px solid red;
+		padding: 20px;
+	}
+	.container:after{
+		content: '';
+		display: block;
+		clear: both;
+	}
+	.aside{
+		float: left;
+		width: 300px;
+		height: 800px;
+		background-color: red;
+	}
+	.main{
+		
+		height: 800px;
+		background-color: blue;
+		margin-left: 320px;
+	}
+
+
+</style>
+<body>
+	<div class="container">
+		<aside class="aside">aside</aside>
+		<main class="main">main</main>
+	</div>
+</body>
+</html>

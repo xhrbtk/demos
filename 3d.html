@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>正方体</title>
+	<!-- <link rel="stylesheet" type="text/css" href="css/style.css"> -->
+</head>
+<style >
+   *{
+   	
+   }
+	#cube figure{
+		font-size: 120px;
+		line-height: 196px;
+		font-weight: bold;
+		color: white;
+		text-align: center;
+	}
+	.front  { background: hsla(   0, 100%, 50%, 0.5 ); }
+    .back   { background: hsla(  60, 100%, 50%, 0.5 ); }
+    .right  { background: hsla( 120, 100%, 50%, 0.5 ); }
+    .left   { background: hsla( 180, 100%, 50%, 0.5 ); }
+    .top    { background: hsla( 240, 100%, 50%, 0.5 ); }
+    .bottom { background: hsla( 300, 100%, 50%, 0.5 ); }
+	.container{
+		width: 200px;
+		margin: 0 auto;
+		
+		/*position: relative;*/
+	}
+	#cube{
+		position: relative;
+	}
+	#cube figure{
+		width: 196px;
+		height: 196px;
+		border: 2px solid black;
+		position: absolute;
+	}
+	/*创造3d空间*/
+	.container{
+		perspective: 1000px;
+	}
+	#cube{
+		transform-style: perspective-3d;
+
+	}
+	.front{transform:rotateY(0deg) translateZ(100px);}
+	.back{transform:rotateY(0deg) translateZ(-100px);}
+	.left{transform:rotateY(90deg) translateZ(-100px);}
+	.right{transform:rotateY(90deg) translateZ(100px);}
+	.top{transform:rotateX(90deg) translateZ(100px)}
+	.bottom{transform:rotateX(90deg)translateZ(-100px)}
+	
+
+</style>
+<body>
+<section class="container">
+	<div id="cube">
+		<figure class="front">1</figure>
+		<figure class="back">2</figure>
+		<figure class="right">3</figure>
+		<figure class="left">4</figure>
+		<figure class="top">5</figure>
+		<figure class="bottom">6</figure>
+	</div>
+</section>
+	
+		
+			
+</body>
+</html>

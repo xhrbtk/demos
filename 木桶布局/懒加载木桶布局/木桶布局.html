@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>木桶布局</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <link href="" rel="stylesheet">
+  <script src="jquery.min.js"></script>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+  body{
+    
+  }
+    .wrap{
+      
+      width: 1000px;
+      margin: 0 auto;
+  
+      
+    }
+
+    .img-row {
+      margin-bottom: 8px;
+     
+    }
+
+    .img-row:after {
+      content: "";
+      display: block;
+      clear: both;
+    }
+
+    .img-box {
+   margin-left: 3px;
+   margin-right: 3px;
+      float: left;
+  
+    }
+
+    .img-line .img-box:first-child {
+      padding-left: 0;
+    }
+    #load{
+    visibility: hidden;
+    height: 20px;
+    text-align: center;
+    width: 50px;
+    height: 50px;
+
+  }
+
+  </style>
+</head>
+
+<body>
+<div class="wrap">
+  <div class="img-preview">
+    
+   </div>
+  <div id="load">我是看不见的</div>
+</div>
+  
+
+  <script>
+
+
+  function Barrel($ct){
+    this.$ct = $ct;
+    this.rowList = [];
+    this.loadImg();
+  }
+
+  Barrel.prototype = {
+    loadImg: function(){
+      var _this = this;
+      var imgs = this.getImgUrls(15);
+      for(var i=0; i<imgs.length; i++){
+        var img = new Image();
+        // console.log(img)
+        img.src = imgs[i];
+        img.onload = function(){
+          var imgInfo = {
+            target : this,
+            width: 300* (this.width/this.height),
+            height: 300
+          };
+
+          _this.render(imgInfo);
+        }
+      }
+      //
+    },
+    // 页面渲染
+    // 一张一张加进来的
+    render: function(imgInfo){
+
+      var clientWidth = this.$ct.width();
+      var rowWidth = 0;
+      var newRowHeight = 0;
+      var lastImgInfo = imgInfo;
+
+      this.rowList.push(imgInfo);
+      console.log(this.rowList.length)
+      for(var i=0; i< this.rowList.length; i++){
+        console.log(this.rowList[i].width)
+         rowWidth = rowWidth + this.rowList[i].width;   
+      }
+      console.log(rowWidth)
+      console.log(clientWidth)
+      // 当前图片大于可视窗口宽度的时候  开始去摆放这一排图片
+      if(rowWidth > clientWidth){
+         
+        this.rowList.pop();
+        // 调整图片宽度
+
+        // 图片的宽度会随着高度改变而等比改变  所以如果
+        // 想要图片充满整个空间  只需要让图片的高度等比放大就好
+        // 
+        newRowHeight = clientWidth*300/(rowWidth-imgInfo.width)-10;
+        //   rowWidth/300   ==  clientWidth/ X
+        console.log(this.rowList)
+        this.layout(newRowHeight);
+        this.rowList = [];
+        this.rowList.push(imgInfo);
+      }
+      
+    },
+    // 摆放图片
+
+    layout: function(newRowHeight){
+      console.log('createRow');
+      var $rowCt = $('<div class="img-row"></div>');
+      $.each(this.rowList, function(idx, imgInfo){
+        var $imgCt = $('<div class="img-box"></div>'),
+            $img = $(imgInfo.target);
+            $img.height(newRowHeight);
+            console.log("高度"+$img.height())
+            $img.width()
+            $imgCt.append($img);
+            $rowCt.append($imgCt);
+      });
+      console.log(this.$ct[0])
+      this.$ct.append($rowCt);
+    },
+// 获得图片
+    getImgUrls: function(num) {
+      var width, height, urls = [];
+      for (var i = 0; i < num; i++) {
+        width = Math.floor(Math.random() * 100 +200);
+        height = 300
+        urls.push("https://picsum.photos/"+width+'/'+height+'?random')
+      }
+      return urls;
+    }
+  }
+
+ new Barrel($('.img-preview'));
+
+// var timer=setInterval(function(){
+//   new Barrel($('.img-preview'));
+// },1000)
+
+$(window).scroll(function(){
+  // if(!isDataArrive) return
+    
+  if(isVisible($('#load'))){
+  // $('#load').html('<img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1514289855299&di=c74b3a7e716827a39ab16e3559d3b457&imgtype=0&src=http%3A%2F%2Fimg.zcool.cn%2Fcommunity%2F01965756f0a5de6ac7257d202cc205.gif" alt="" />')
+  // var timer=setTimeout(new Barrel($('.img-preview')),30000)
+  new Barrel($('.img-preview'));
+  }
+})
+
+//滚动到我是看不见的元素的位置  开始加载图片
+ function isVisible($el){
+    var scrollH = $(window).scrollTop(),
+        winH = $(window).height(),
+        top = $el.offset().top;
+
+      if(top < winH + scrollH){
+        return true;
+      }else{
+        return false;
+      }
+  }
+  
+
+
+   
+   
+  </script>
+
+
+
+</body>
+
+</html>

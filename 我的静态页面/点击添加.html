@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+</head>
+<style>
+*{
+	box-sizing: border-box;
+}
+ul,li{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+.tab{
+	width: 620px;
+	margin: 0 auto;
+
+	/*border: 1px solid red;*/
+}
+.tab>.header{
+	width: 210px;
+	height: 50px;
+	text-align: center;
+	/*border: 1px solid #ccc;
+	border-radius: 3px;*/
+}
+.header>li{
+	float: left;
+	width: 70px;
+	font-size: 14px;
+	line-height: 50px;
+	border-left: 1px solid #ccc;
+	border: 1px solid #ccc;
+	display: inline-block;
+	/*position: relative;*/
+
+}
+
+.header:after{
+	content: '';
+	display:"block";
+	clear: both;
+}
+.content{
+	width:942px ;
+	border: 1px solid #ccc;
+	overflow: hidden;
+}
+.panel{
+	/*width: 952px;*/
+	height: 620px;
+	
+}
+.panel li{
+	position: relative;
+}
+.listhover{
+	
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 300px;
+	height: 330px;
+	border: 1px solid green;
+	background: rgba(254,200,54,.9);
+	text-align: center;
+	/*line-height: 290px;*/
+	display: none;
+}
+.icon1{
+	display: inline-block;
+	text-decoration: none;
+	background: #fff;
+	border: 1px solid red;
+	position: absolute;
+	color: red;
+	left: 90px;
+	width: 120px;
+	padding: 20px;
+	top: 113px;
+	
+}
+.panel .hover{
+	display: block;
+	opacity: 0.7;
+}
+
+.panel li{
+	float: left;
+	margin-left: 10px;
+	margin-top: 10px;
+}
+.panel li img{
+	width: 300px;
+	height: 290px;
+}
+.content .panel{
+	display: none;
+}
+.content .active{
+	display: block;
+}
+
+.name{
+	display: block;
+	font-size: 14px;
+}
+.price{
+	display: block;
+	color: red;
+	font-size: 12px;
+}
+
+.btn{
+	display: block;
+	width: 100px;
+	height: 50px;
+	border: 1px solid red;
+	border-radius: 3px;
+	margin-top: 20px;
+	cursor: pointer;
+}
+
+</style>
+<body>
+	<div class="tab">
+		<ul class="header">
+			<li class="active">中餐</li>
+		</ul>
+		<div class="content ">
+			<ul class=" panel active">
+				<li class="dingwei"><img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1514125932649&di=d3b4a7fa92d2851278676e176b41a381&imgtype=0&src=http%3A%2F%2Fimg1.3lian.com%2F2015%2Fa1%2F148%2Fd%2F116.jpg" alt="">
+				<span class="name">中餐</span>
+				<span class="price">￥1699</span>
+				<div class="listhover">
+					<a href="#" class="icon1">立即抢购</a>
+				</div>
+				</li>
+
+				<li class="dingwei"><img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1514720650&di=080b8b24661c61eae606c600ce067674&imgtype=jpg&er=1&src=http%3A%2F%2Ffile06.16sucai.com%2F2016%2F0518%2Fd58ce7c38c0d1f06fa6ab504b293408d.jpg" alt="">
+				<span class="name">中餐</span>
+				<span class="price">￥1699</span>
+				<div class="listhover">
+					<a href="#" class="icon1">立即抢购</a>
+				</div>
+				</li>
+				<li class="dingwei"><img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1514125932649&di=956aa3d013fa6f9e292bda7c175e805e&imgtype=0&src=http%3A%2F%2Fimg.taopic.com%2Fuploads%2Fallimg%2F120528%2F188952-12052Q25F491.jpg" alt="">
+				<span class="name">中餐</span>
+				<span class="price">￥1699</span>
+				<div class="listhover">
+					<a href="#" class="icon1">立即抢购</a>
+				</div>
+				</li>
+				<li class="dingwei"><img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1514125932648&di=41c1a0ebf9e79effa0b6108c4aa339bb&imgtype=0&src=http%3A%2F%2Fimg.taopic.com%2Fuploads%2Fallimg%2F120819%2F214833-120Q921424983.jpg" alt="">
+				<span class="name">中餐</span>
+				<span class="price">￥1699</span>
+				<div class="listhover">
+					<a href="#" class="icon1">立即抢购</a>
+				</div>
+				</li>
+				<li class="dingwei"><img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1514125932647&di=502c45449c9578be1a8c1937caf6fbd2&imgtype=0&src=http%3A%2F%2Fimgsrc.baidu.com%2Fimgad%2Fpic%2Fitem%2F9f2f070828381f30fbba465aa3014c086f06f0a6.jpg" alt="">
+				<span class="name">中餐</span>
+				<span class="price">￥1699</span>
+				<div class="listhover">
+					<a href="#" class="icon1">立即抢购</a>
+				</div>
+				</li>
+				<li class="dingwei"><img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1514125932646&di=ae2566971ec7b7e45557091659f365b5&imgtype=0&src=http%3A%2F%2Fpic.jj20.com%2Fup%2Fallimg%2F1011%2F04121G13138%2F1F412113138-8.jpg" alt="">
+				<span class="name">中餐</span>
+				<span class="price">￥1699</span>
+				<div class="listhover">
+					<a href="#" class="icon1">立即抢购</a>
+				</div>
+				</li>
+			</ul>
+		</div>
+		<button type="button" class="btn">添加</button>
+	</div>
+	<script>
+	
+
+
+$(' .panel').on('mouseenter', '.dingwei', function(e){
+	var $this=$(this)
+
+  $this.find('.listhover').addClass('hover').siblings().removeClass('hover');
+});
+$(' .panel ').on('mouseleave','.dingwei', function(e){
+	var $this=$(this)
+  $this.find('div').removeClass('hover');
+});
+
+
+
+// 点击添加
+var products = [
+	{
+		img: 'http://pic60.nipic.com/file/20150119/6948447_144308319000_2.jpg',
+		name: '中餐',
+		price: '￥405.00'
+	},{
+		img: 'http://pic29.nipic.com/20130502/11248517_174923494149_2.jpg',
+		name: '中餐',
+		price: '￥100.00'
+	},{
+		img: 'http://img3.redocn.com/tupian/20141110/kouweiyameishi_3431651.jpg',
+		name: '中餐',
+		price: '￥45.00'
+	}
+];
+
+$(".btn").on('click',function(){
+	for(var key in products){
+		var $lis=$("<li></li>")
+		$lis.addClass("dingwei")
+		var $img=$("<img >")
+		$img.attr('src',products[key].img)
+		$lis.append($img)
+
+
+		var $spaname=$("<span></span>")
+		$spaname.addClass("name")
+		$spaname.text(products[key].name)
+		var $spanprice=$("<span></span>")
+		$spanprice.addClass("price")
+		$spanprice.text(products[key].price)
+
+		$lis.append($spaname)
+		$lis.append($spanprice)
+
+		var $div=$("<div></div>")
+		$div.addClass("listhover")
+		var $a=$("<a ></a>")
+		$a.addClass("icon1")
+		$a.attr('href',"#")
+		$a.text("立即抢购")
+
+		$div.append($a)
+		$lis.append($div)
+		$(".content .panel").append($lis)
+	}
+
+	
+})
+
+
+
+
+
+	</script>
+</body>
+</html>
