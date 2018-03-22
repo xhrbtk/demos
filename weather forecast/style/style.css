@@ -1,0 +1,159 @@
+@font-face {
+  font-family: 'iconfont';  /* project id 600384 */
+  src: url('//at.alicdn.com/t/font_600384_nfy7ho54v8mjwcdi.eot');
+  src: url('//at.alicdn.com/t/font_600384_nfy7ho54v8mjwcdi.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_600384_nfy7ho54v8mjwcdi.woff') format('woff'),
+  url('//at.alicdn.com/t/font_600384_nfy7ho54v8mjwcdi.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_600384_nfy7ho54v8mjwcdi.svg#iconfont') format('svg');
+}
+.iconfont{
+	font-family: "iconfont";
+	font-style: normal;
+}
+
+/* 主要内容 */
+body{
+	background-color:  #F4606C;
+	color: #fff;
+	margin: 0;
+	padding: 30px;
+
+}
+.container{
+	width: 1000px;
+	margin-left: auto;
+	margin-right: auto;12
+	margin-top: 50px;
+
+}
+.container inputcity{
+	width: 180px;
+	height: 50px;
+}
+.container inputcity:focus{
+	border:1px solid #fff;
+}
+.container .search{
+	width:50px;
+	border-radius:3px;
+	background-color:#fff;
+}
+.container h1{
+		text-align: center;
+		font-size: 60px
+}
+
+.message{
+	width: 1000px;
+	font-size: 30px;
+	position: relative;
+	/*border:1px solid red;*/
+	text-align: center;
+	height:200px;
+	line-height: 200px;
+
+}
+.message div{
+	display: inline-block;
+
+}
+.message .right{
+	position: absolute;
+	right:30px;
+} 
+.message .left{
+	position: absolute;
+	left:30px;
+}
+.message .left img{
+	display: inline;
+	width:80px;
+}
+
+
+
+/* 天气信息 */
+.weather{
+	border-left: 1px solid rgba(255,255,255,0.2);
+	border-bottom: 1px solid rgba(255,255,255,0.2);
+	border-top: 1px solid rgba(255,255,255,0.2);
+	border-right: none;
+	margin-left: -2px;
+	
+	opacity: 0.7;
+	z-index: -1;
+}
+.weather::after{
+	content: '';
+	display: block;
+	clear: both;
+}
+.weather>div{
+	text-align: center;
+	border-right: 1px solid rgba(255,255,255,0.2);
+	/* height: 400px; */
+	width: 99px;
+	float: left;
+	line-height: 80px;
+	/* overflow: hidden; */
+}
+.weather div>img{
+	width: 50px;
+	height: 50px;
+	line-height: 50px;
+	vertical-align: center;
+
+
+}
+.weather>div span{
+	display: block;
+	/* border: 1px solid red; */
+	height: 50px;
+	line-height: 50px;
+}
+/*detail*/
+.suggestion{
+	
+	width:1000px;
+/*	border:1px solid red;*/
+
+
+}
+.suggestion::after{
+	content:"";
+	display:block;
+	clear:both;
+}
+.suggestion ul{
+	float:left;
+	list-style: none;
+	border:1px solid rgba(255,255,255,0.2) ;
+	width:320px;
+	padding:0;
+	height:200px;
+	margin-left:8px;
+	position: relative;
+
+	
+}
+.suggestion ul img{
+	width:100px;
+	height:100px;
+	background:#F4606C;
+	position: absolute;
+	top:20px;
+	left:10px;
+}
+.suggestion ul .brief,.details{
+	position: absolute;
+	left:140px;
+
+}
+.suggestion ul .details{
+	top:40px;
+	opacity: 0.5;
+}
+.suggestion ul .brief{
+	top:10px;
+	font-size: 20px;
+}
