@@ -1,0 +1,83 @@
+@font-face {
+  font-family: 'iconfont';  /* project id 600384 */
+  src: url('//at.alicdn.com/t/font_600384_nfy7ho54v8mjwcdi.eot');
+  src: url('//at.alicdn.com/t/font_600384_nfy7ho54v8mjwcdi.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_600384_nfy7ho54v8mjwcdi.woff') format('woff'),
+  url('//at.alicdn.com/t/font_600384_nfy7ho54v8mjwcdi.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_600384_nfy7ho54v8mjwcdi.svg#iconfont') format('svg');
+}
+.iconfont{
+	font-family: "iconfont";
+	font-style: normal;
+}
+
+/* 主要内容 */
+body{
+	background-color:  #F4606C;
+	color: #fff;
+	margin: 0;
+	padding: 0;
+
+}
+.container{
+	width: 1000px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 30px;
+
+}
+.container h1{
+		text-align: center;
+		font-size: 60px
+}
+.message{
+	width: 1000px;
+	/* border: 1px solid blue; */
+	padding-right: 100px;
+	text-align: right;
+	height: 150px;
+	line-height: 150px;
+	font-size: 30px;
+}
+.message .timenow{
+	/* display: inline-block; */
+	/* padding-left: 300px; */
+
+	/* padding-right: 00px; */
+}
+/* 天气信息 */
+.weather{
+	border-left: 1px solid rgba(255,255,255,0.2);
+	border-bottom: 1px solid rgba(255,255,255,0.2);
+	border-top: 1px solid rgba(255,255,255,0.2);
+	border-right: none;
+	margin-left: -2px;
+}
+.weather::after{
+	content: '';
+	display: block;
+	clear: both;
+}
+.weather>div{
+	text-align: center;
+	border-right: 1px solid rgba(255,255,255,0.2);
+	/* height: 400px; */
+	width: 99px;
+	float: left;
+	line-height: 80px;
+	/* overflow: hidden; */
+}
+.weather div>img{
+	width: 50px;
+	height: 50px;
+	line-height: 50px;
+	vertical-align: center;
+
+
+}
+.weather>div span{
+	display: block;
+	/* border: 1px solid red; */
+	height: 50px;
+	line-height: 50px;
+}
