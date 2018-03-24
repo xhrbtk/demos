@@ -26,11 +26,9 @@ var Footer = {
     this.$footer = $('footer')
     this.$ul = this.$footer.find('ul')
     this.$box = this.$footer.find('.box')
-    this.$leftBtn = this.$footer.find('.icon-left')
-    this.$rightBtn = this.$footer.find('.icon-right')
+    
 
-    this.isToEnd = false
-    this.isToStart = true
+  
     this.isAnimate = false
 
     this.bind()
@@ -39,51 +37,8 @@ var Footer = {
 
   bind: function(){
     var _this = this
-    this.$rightBtn.on('click', function(){
-      // 避免重复点击
-      if(_this.isAnimate) return
-        // 获得item的宽度
-      var itemWidth = _this.$box.find('li').outerWidth(true)
-      // 看一行能存放多少个item
-      var rowCount = Math.floor(_this.$box.width()/itemWidth)
-      // 如果没有滑动到最后
-      if(!_this.isToEnd){
-        // 开始滑动
-        _this.isAnimate = true
-        _this.$ul.animate({
-          left: '-='+rowCount*itemWidth
-        }, 400, function(){
-          // 重新锁定
-          _this.isAnimate = false
-          // 
-          _this.isToStart = false
-          if(parseFloat(_this.$box.width()) - parseFloat(_this.$ul.css('left')) >= parseFloat(_this.$ul.css('width')) ){
-            // 如果已经滑动到最后了 那么锁定左侧按钮
-            _this.isToEnd = true
-            alert("啊呀，到最后拉！")
-          }
-        })
-      }
-    })
-// 左侧按钮点击滑动
-    this.$leftBtn.on('click', function(){
-      if(_this.isAnimate) return
-      var itemWidth = _this.$box.find('li').outerWidth(true)
-      var rowCount = Math.floor(_this.$box.width()/itemWidth)
-      if(!_this.isToStart) {
-        _this.isAnimate = true
-        _this.$ul.animate({
-          left: '+='+rowCount*itemWidth
-        }, 400, function(){
-          _this.isAnimate = false
-          _this.isToEnd = false
-          if(parseFloat(_this.$ul.css('left')) >= 0 ){
-            _this.isToStart = true
-            alert("啊呀，前面没有啦！")
-          }
-        })
-      }     
-    })
+    
+
 // 点击图片切换
     this.$footer.on('click', 'li', function(){
       $(this).addClass('active')
@@ -113,21 +68,12 @@ var Footer = {
     var html = ''
     channels.forEach(function(channel){
       html += '<li data-channel-id='+channel.channel_id+' data-channel-name='+channel.name+'>'
-            + '  <div class="cover" style="background-image:url('+channel.cover_small+')"></div>'
+            + '  <div class="cover"><img src='+'"'+channel.cover_small+'">'+ '</div>'
             + '  <h3>'+channel.name+'</h3>'
             +'</li>'
     })
     this.$ul.html(html)
-    this.setStyle()
-  },
 
-  setStyle: function(){
-    var count = this.$footer.find('li').length
-    var width = this.$footer.find('li').outerWidth(true)
-    console.log(count, width)
-    this.$ul.css({
-      width: count * width + 'px'
-    })
   }
 
 
@@ -144,7 +90,8 @@ var Fm = {
     // 自动播放歌曲
     this.loadMusic()
     this.audio.addEventListener('ended',function(){
-       _this.loadMusic()
+    _this.$container.find('.bar-progress').css('width',0)
+    _this.loadMusic()
     })
   },
   bind: function(){
@@ -176,6 +123,9 @@ var Fm = {
     this.$container.find('.btn-next').on('click', function(){
       _this.loadMusic()
     })
+    this.$container.find('.btn-pre').on('click', function(){
+      _this.loadMusic()
+    })
     // 点击play 播放条进度
     this.audio.addEventListener('play', function(){
       clearInterval(_this.statusClock)
@@ -197,7 +147,9 @@ var Fm = {
     // 获得音乐
     $.getJSON('https://jirenguapi.applinzi.com/fm/getSong.php',{channel: this.channelId})
     .done(function(ret){
+      console.log(ret)
       _this.song = ret['song'][0]
+      console.log(_this.song)
       _this.setMusic()
       _this.loadLyric()
     })
@@ -208,7 +160,7 @@ var Fm = {
   
     $.getJSON('https://jirenguapi.applinzi.com/fm/getLyric.php',{sid: this.song.sid}).done(function(ret){
       var lyric = ret.lyric
-      console.log(lyric)
+      // console.log(lyric)
       var lyricObj = {}
       lyric.split('\n').forEach(function(line){
         //[01:10.25][01:20.25]It a new day
@@ -230,7 +182,7 @@ var Fm = {
     console.log(this.song)
     this.audio.src = this.song.url
     // 修改背景图片
-    $('.bg').css('background-image', 'url('+this.song.picture+')')
+    // $('.bg').css('background-image', 'url('+this.song.picture+')')
     this.$container.find('.aside figure').css('background-image', 'url('+this.song.picture+')')
     // 修改标题和歌手名字以及标签
     this.$container.find('.detail h1').text(this.song.title)
@@ -275,12 +227,31 @@ var Fm = {
       this.$container.find('.lyric p').text(line)
        .boomText()
     }
+  },
+  // 点击红心 收藏列表
+  btnHeart(){
+    var _this=this
+    var html=''
+    this.$container.find('.icon-heart').click(function(){
+      _this.$container.find('.icon-heart').css("color","red")
+     var $li=$('<li data-src='+_this.song.url+'><span>'+_this.song.title+'</span><span>'+_this.song.artist+'</span></li>')
+      _this.$container.find('.list').append($li)
+    })
+  },
+  // 点击隐藏收藏区域
+  btnCollectHide:function(){
+    var _this=this
+    this.$container.find('.collect').click(function(){
+      var $ul=$(this).find('ul')
+      if($ul.is(":visible")){
+        $ul.hide()
+      }else{
+        $ul.show()
+      }
+    })
   }
-  
-  
-  
-
 }
+ 
 
 
 
