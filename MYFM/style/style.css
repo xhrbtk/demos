@@ -1,0 +1,256 @@
+/* icon */
+
+@font-face {
+  font-family: 'iconfont';  /* project id 603439 */
+  src: url('//at.alicdn.com/t/font_603439_n652siv8lnv1jor.eot');
+  src: url('//at.alicdn.com/t/font_603439_n652siv8lnv1jor.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_603439_n652siv8lnv1jor.woff') format('woff'),
+  url('//at.alicdn.com/t/font_603439_n652siv8lnv1jor.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_603439_n652siv8lnv1jor.svg#iconfont') format('svg');
+}
+
+.iconfont {
+  font-family:"iconfont" !important;
+  font-size:16px;
+  font-style:normal;
+  /* background-color: red; */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+.icon-play:before { content: "\e61c"; }
+
+.icon-pre:before { content: "\e67e"; }
+
+.icon-next:before { content: "\e67d"; }
+
+.icon-pause:before { content: "\e67b"; }
+
+
+/* body */
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family:Arial;
+  background-color: #19CAAD ;
+}
+
+a {
+  text-decoration: none;
+  color: #444;
+}
+
+ul,li{
+  list-style: none;
+
+}
+
+
+.layout {
+  margin: 0 auto;
+  width: 1000px;
+}
+
+/* 侧边收藏栏 */
+aside {
+  color: #fff;
+  opacity: 0.8;
+}
+aside{
+  position: fixed;
+  top: 30%;
+  left: 8%;
+}
+aside h3{
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+aside span{
+  display: inline-block;
+  padding: 10px 10px;
+}
+aside li{
+  border-bottom: 1px solid rgb(255,255,255,0.3);
+  cursor: pointer;
+}
+
+/* 主要布局区 */
+main {
+  padding-top: 30px;
+  height: 700px;
+  margin-top: 40px;
+  position: relative;
+}
+main::after{
+  content: '';
+  display: block;
+  clear: both;
+}
+
+main .aside {
+  width: 280px;
+
+  position: absolute;
+  top: 160px;
+  right: 60px;
+}
+
+main .aside > figure{
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  background-image: url();
+  background-size: cover;
+  background-position: center center;
+}
+main .detail{
+  height: 300px;
+
+  position: absolute;
+  top: 38%;
+  
+}
+main .detail .actions {
+  display: flex;
+  margin-top: 20px;
+}
+
+main .detail .iconfont{
+  flex: 1;
+  text-align: center;
+  font-size: 40px;
+
+ /*  color: rgba(255,255,255,0.4); */
+  transition: color .4s;
+  cursor: pointer;
+}
+main .detail .iconfont:hover{
+/*   color: red; */
+}
+
+
+main .detail {
+  margin-left: 100px;
+  color: #fff;
+}
+
+main .icons{
+  display: flex;
+  font-size: 3px;
+  margin-top: 12px;
+}
+main .icons li{
+  flex: 1;
+}
+main .icons .iconfont{
+  font-size: 3px;
+  margin-right: 1px;
+}
+main .area-bar{
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  width: 420px;
+  cursor: pointer;
+
+}
+main .area-bar .bar{
+  position: relative;
+  flex: 3;
+  height: 2px;
+  border-radius: 0.5px;
+
+  background: rgba(255, 255, 255, 0.4);
+}
+main .area-bar .current-time{
+  width: 3px;
+  font-size: 2px;
+  margin-left: 1px;
+}
+main .area-bar .bar-progress{
+  position: absolute;
+  height: 2px;
+
+  background-color: #fff;
+  border-radius: .5px;
+  transition: width .8s;
+}
+
+main .author {
+  font-size: 30px;
+  margin-top: 30px;
+  text-align: center;
+}
+main .lyric {
+  
+   text-align: center;
+  font-size: 20px;
+  margin-top: 20px;
+  color: rgba(255, 255, 255, 0.4);
+}
+
+
+/* 底部区域 */
+
+
+footer ul{
+  text-align: center;
+
+
+}
+footer ul::after{
+  content: '';
+  display: block;
+  clear: both;
+
+}
+footer li{
+  float: left;
+  margin-left:35px;
+  margin-top: 80px;
+  cursor: pointer;
+
+}
+footer img{
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+}
+
+
+footer li:hover {
+  box-shadow: 0 0 .5px .5px rgba(255,255,255,0.8);
+}
+footer li .cover {
+ 
+  background-size: cover;
+  background-position: center center;
+}
+footer h3{
+   font-size:24px;
+  color: rgba(255,255,255,0.6);
+  margin-top: 20px;
+}
+footer li.active {
+  box-shadow: 0 0 5px 5px rgba(255,255,255,0.8);
+
+}
+
+
+
+
+
+.boomText {
+  display: inline-block;
+  opacity: 0;
+}
+
+
+
