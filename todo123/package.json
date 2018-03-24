@@ -10,7 +10,6 @@
     "build": "node build/build.js"
   },
   "dependencies": {
-    "todomvc-app-css": "^2.1.0",
     "vue": "^2.5.2"
   },
   "devDependencies": {
