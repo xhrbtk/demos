@@ -28,8 +28,7 @@ var Footer = {
     this.$box = this.$footer.find('.box')
     
 
-    this.isToEnd = false
-    this.isToStart = true
+  
     this.isAnimate = false
 
     this.bind()
@@ -91,6 +90,7 @@ var Fm = {
     // 自动播放歌曲
     this.loadMusic()
     this.audio.addEventListener('ended',function(){
+    _this.$container.find('.bar-progress').css('width',0)
     _this.loadMusic()
     })
   },
@@ -121,6 +121,9 @@ var Fm = {
     })
     // 点击下一个按钮播放歌曲
     this.$container.find('.btn-next').on('click', function(){
+      _this.loadMusic()
+    })
+    this.$container.find('.btn-pre').on('click', function(){
       _this.loadMusic()
     })
     // 点击play 播放条进度
