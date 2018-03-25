@@ -186,8 +186,3 @@ var canvas = document.getElementById("myCanvas");
  }
  }
  setInterval(timeUpdate,40);
- // ajax
-  $.get('http://api.jirengu.com/fm/getSong.php')
-   .done(function(channelInfo){
-    console.log(channelInfo)
-  });
