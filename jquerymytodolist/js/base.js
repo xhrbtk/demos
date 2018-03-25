@@ -122,7 +122,8 @@ var listenDetail=function(){
     }
     // 删除那操作
     var listenDelete=function(){
-    	$('.delete').click(function(){
+    	$('.delete').click(function(event){
+    		event.stopPropagation()
     	 deleteIndex=task_list.length-1-$(this).parent().parent().index()
     		var r=confirm('确认要删除吗？')
     		if(r){
@@ -151,3 +152,42 @@ var listenDetail=function(){
 $(function(){
 	myTodoModule.initModule()
 })
+
+
+// canvas
+var canvas = document.getElementById("myCanvas");
+ var context = canvas.getContext("2d");
+ var practicles = [];
+ for (var i = 0; i < 500; i++) {//循环生成500粒
+ practicles.push({
+ x: Math.random()*(window.innerWidth),
+ y: Math.random()*(window.innerHeight),
+ vx: Math.random()-0.5,
+ vy: Math.random()+0.5,
+ size: Math.random()*3+1,
+ color: "#FFF"
+ })
+ }
+ function timeUpdate(){
+ context.clearRect(0,0,window.innerWidth,window.innerHeight);//清除画布区域
+ var practicle;
+ for (var i = 0; i < 500; i++) {
+ var practicle = practicles[i];
+ practicle.x += practicles[i].vx;
+ practicle.y += practicles[i].vy;
+ if (practicle.x<0) {practicle.x=window.innerWidth}
+ if (practicle.x>window.innerWidth) {practicle.x=0}
+ if (practicle.y>window.innerHeight) {practicle.y=0}
+ context.beginPath();
+ context.arc(practicle.x,practicle.y,practicle.size,0,Math.PI*2)
+ context.closePath();
+ context.fillStyle = practicle.color;
+ context.fill();
+ }
+ }
+ setInterval(timeUpdate,40);
+ // ajax
+  $.get('http://api.jirengu.com/fm/getSong.php')
+   .done(function(channelInfo){
+    console.log(channelInfo)
+  });
