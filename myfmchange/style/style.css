@@ -1,3 +1,5 @@
+
+
 /* icon */
 
 @font-face {
@@ -19,13 +21,13 @@
 }
 
 
-.icon-pause:before { content: "\e61c"; }
+.icon-play:before { content: "\e61c"; }
 
 .icon-pre:before { content: "\e67e"; }
 
 .icon-next:before { content: "\e67d"; }
 
-.icon-play:before { content: "\e67b"; }
+.icon-pause:before { content: "\e67b"; }
 
 
 /* body */

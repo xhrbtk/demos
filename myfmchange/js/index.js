@@ -1,5 +1,7 @@
 
 
+
+
 var EventCenter = {
   on: function(type, handler){
     $(document).on(type, handler)
@@ -9,11 +11,11 @@ var EventCenter = {
   }
 }
 
-EventCenter.on('hello', function(e, data){
-  console.log(data)
-})
+// EventCenter.on('hello', function(e, data){
+//   console.log(data)
+// })
 
-EventCenter.fire('hello', '你好')
+// EventCenter.fire('hello', '你好')
 
 
 
