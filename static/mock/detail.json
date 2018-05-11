@@ -1,9 +1,9 @@
 {
   "ret": true,
   "data": {
-    "sightName": "大连圣亚海洋世界(AAAA景区)",
-    "bannerImg": "http://img1.qunarzz.com/sight/p0/201404/23/04b92c99462687fa1ba45c1b5ba4ad77.jpg_600x330_bf9c4904.jpg",
-    "gallaryImgs": ["http://img1.qunarzz.com/sight/p0/201404/23/04b92c99462687fa1ba45c1b5ba4ad77.jpg_800x800_70debc93.jpg", "http://img1.qunarzz.com/sight/p0/1709/76/7691528bc7d7ad3ca3.img.png_800x800_9ef05ee7.png"],
+    "sightName": "禾木景区(AAAAA景区)",
+    "bannerImg": "https://dimg07.c-ctrip.com/images/fd/tg/g1/M06/7C/D5/CghzfFWwymSAGcwNAAytnvA7V7s473_C_500_280.jpg",
+    "gallaryImgs": ["https://dimg06.c-ctrip.com/images/fd/tg/g1/M05/81/94/CghzfFWxEjOAUeVqABFM-OKdth8923_C_500_280.jpg", "https://dimg08.c-ctrip.com/images/fd/tg/g1/M06/7D/07/CghzfVWw12eAJXrtAC2R-bFcKHU231_C_500_280.jpg"],
     "categoryList": [{
         "title": "成人票",
         "children": [{
@@ -21,5 +21,6 @@
       }, {
         "title": "特惠票"
       }]
+      
   }
 }
