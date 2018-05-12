@@ -1,5 +1,6 @@
 {
 	"ret": true,
+	"city":"北京",
 	"data":{
 		"hotCities": [{
 			"id": 1,
