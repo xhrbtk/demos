@@ -1,0 +1,26 @@
+{
+  "ret": true,
+  "data": {
+    "sightName": "禾木景区(AAAAA景区)",
+    "bannerImg": "https://dimg07.c-ctrip.com/images/fd/tg/g1/M06/7C/D5/CghzfFWwymSAGcwNAAytnvA7V7s473_C_500_280.jpg",
+    "gallaryImgs": ["https://dimg06.c-ctrip.com/images/fd/tg/g1/M05/81/94/CghzfFWxEjOAUeVqABFM-OKdth8923_C_500_280.jpg", "https://dimg08.c-ctrip.com/images/fd/tg/g1/M06/7D/07/CghzfVWw12eAJXrtAC2R-bFcKHU231_C_500_280.jpg"],
+    "categoryList": [{
+        "title": "成人票",
+        "children": [{
+          "title": "成人三馆联票",
+          "children": [{
+            "title": "成人三馆联票 - 某一连锁店销售"
+          }]
+        },{
+          "title": "成人五馆联票"
+        }]
+      }, {
+        "title": "学生票"
+      }, {
+        "title": "儿童票"
+      }, {
+        "title": "特惠票"
+      }]
+      
+  }
+}

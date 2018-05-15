@@ -1,0 +1,108 @@
+{
+  "ret": true,
+  "data": {
+   
+    "swiperList": [{
+        "id": "0001",
+        "imgUrl": "http://p1.meituan.net/codeman/826a5ed09dab49af658c34624d75491861404.jpg"
+      },{
+        "id": "0002",
+        "imgUrl": "http://p0.meituan.net/codeman/33ff80dc00f832d697f3e20fc030799560495.jpg"
+      },{
+        "id": "0003",
+        "imgUrl": "http://p1.meituan.net/codeman/826a5ed09dab49af658c34624d75491861404.jpg"
+      },{
+        "id": "0004",
+        "imgUrl": "http://p0.meituan.net/codeman/33ff80dc00f832d697f3e20fc030799560495.jpg"
+      }],
+    "iconList": [{
+        "id": "0001",
+        "imgUrl": "http://img1.qunarzz.com/piao/fusion/1611/54/ace00878a52d9702.png",
+        "desc": "景点门票"
+      }, {
+        "id": "0002",
+        "imgUrl": "http://img1.qunarzz.com/piao/fusion/1711/df/86cbcfc533330d02.png",
+        "desc": "滑雪季"
+      }, {
+        "id": "0003",
+        "imgUrl": "http://img1.qunarzz.com/piao/fusion/1710/a6/83f636bd75ae6302.png",
+        "desc": "泡温泉"
+      }, {
+        "id": "0004",
+        "imgUrl": "http://img1.qunarzz.com/piao/fusion/1611/35/2640cab202c41b02.png",
+        "desc": "动植园"
+      }, {
+        "id": "0005",
+        "imgUrl": "http://img1.qunarzz.com/piao/fusion/1611/d0/e09575e66f4aa402.png",
+        "desc": "游乐园"
+      }, {
+        "id": "0006",
+        "imgUrl": "http://img1.qunarzz.com/piao/fusion/1611/59/569d3c096e542502.png",
+        "desc": "必游榜单"
+      }, {
+        "id": "0007",
+        "imgUrl": "http://img1.qunarzz.com/piao/fusion/1611/17/4bd370f3eb1acd02.png",
+        "desc": "演出"
+      }, {
+        "id": "0008",
+        "imgUrl": "http://img1.qunarzz.com/piao/fusion/1611/7f/b1ea3c8c7fb6db02.png",
+        "desc": "城市观光"
+      }, {
+        "id": "0009",
+        "imgUrl": "http://img1.qunarzz.com/piao/fusion/1611/a9/ffc620dbda9b9c02.png",
+        "desc": "一日游"
+      }],
+    "recommendList": [{
+        "id": "0001",
+        "imgUrl": "http://p3-q.mafengwo.net/s5/M00/72/A2/wKgB21Aail-CYH4LAAloGv2R9po75.jpeg?imageView2%2F2%2Fw%2F680%2Fq%2F90%7Cwatermark%2F1%2Fimage%2FaHR0cDovL240LXEubWFmZW5nd28ubmV0L3MxMS9NMDAvQzQvMTAvd0tnQkVGcDdzdnVBVk90Z0FBQVhuUTQzcDdjNzA1LnBuZz9pbWFnZU1vZ3IyJTJGdGh1bWJuYWlsJTJGMTgweCUyRnF1YWxpdHklMkY5MA%3D%3D%2Fgravity%2FSouthEast%2Fdx%2F10%2Fdy%2F15%2Fdissolve%2F40",
+        "title": "大美新疆",
+        "desc": "北疆看风景，南疆看风情"
+      }, {
+        "id": "0002",
+        "imgUrl": "http://b1-q.mafengwo.net/s10/M00/03/C8/wKgBZ1n8MayAQF3cAADrwS8KBxg57.jpeg?imageView2%2F2%2Fw%2F680%2Fq%2F90%7Cwatermark%2F1%2Fimage%2FaHR0cDovL240LXEubWFmZW5nd28ubmV0L3MxMS9NMDAvQzQvMTAvd0tnQkVGcDdzdnVBVk90Z0FBQVhuUTQzcDdjNzA1LnBuZz9pbWFnZU1vZ3IyJTJGdGh1bWJuYWlsJTJGMTY5eCUyRnF1YWxpdHklMkY5MA%3D%3D%2Fgravity%2FSouthEast%2Fdx%2F10%2Fdy%2F15%2Fdissolve%2F40",
+        "title": "伊犁河谷",
+        "desc": "感受春的气息"
+      }, {
+        "id": "0003",
+        "imgUrl": "http://b1-q.mafengwo.net/s10/M00/03/CA/wKgBZ1n8Ma2AXbU2AADJD-WuKfY12.jpeg?imageView2%2F2%2Fw%2F680%2Fq%2F90%7Cwatermark%2F1%2Fimage%2FaHR0cDovL240LXEubWFmZW5nd28ubmV0L3MxMS9NMDAvQzQvMTAvd0tnQkVGcDdzdnVBVk90Z0FBQVhuUTQzcDdjNzA1LnBuZz9pbWFnZU1vZ3IyJTJGdGh1bWJuYWlsJTJGMTY5eCUyRnF1YWxpdHklMkY5MA%3D%3D%2Fgravity%2FSouthEast%2Fdx%2F10%2Fdy%2F15%2Fdissolve%2F40",
+        "title": "那拉提",
+        "desc": "美在伊犁"
+      }, {
+        "id": "0004",
+        "imgUrl": "http://b3-q.mafengwo.net/s10/M00/03/CD/wKgBZ1n8Ma-ANGN8AACcVGxVOqY41.jpeg?imageView2%2F2%2Fw%2F680%2Fq%2F90%7Cwatermark%2F1%2Fimage%2FaHR0cDovL240LXEubWFmZW5nd28ubmV0L3MxMS9NMDAvQzQvMTAvd0tnQkVGcDdzdnVBVk90Z0FBQVhuUTQzcDdjNzA1LnBuZz9pbWFnZU1vZ3IyJTJGdGh1bWJuYWlsJTJGMTQ2eCUyRnF1YWxpdHklMkY5MA%3D%3D%2Fgravity%2FSouthEast%2Fdx%2F10%2Fdy%2F15%2Fdissolve%2F40",
+        "title": "薰衣草",
+        "desc": "解忧公主神产地"
+      }, {
+        "id": "0005",
+        "imgUrl": "http://p1-q.mafengwo.net/s11/M00/67/3D/wKgBEFqre-GARtDyAAPQuF8CiiY27.jpeg?imageView2%2F2%2Fw%2F680%2Fq%2F90%7Cwatermark%2F1%2Fimage%2FaHR0cDovL240LXEubWFmZW5nd28ubmV0L3MxMS9NMDAvQzQvMTAvd0tnQkVGcDdzdnVBVk90Z0FBQVhuUTQzcDdjNzA1LnBuZz9pbWFnZU1vZ3IyJTJGdGh1bWJuYWlsJTJGMTgweCUyRnF1YWxpdHklMkY5MA%3D%3D%2Fgravity%2FSouthEast%2Fdx%2F10%2Fdy%2F15%2Fdissolve%2F40",
+        "title": "雪山的主宰",
+        "desc": "感受冬天的寒冷，仰望雪山的洁白"
+      }],
+    "weekendList": [{
+        "id": "0001",
+        "imgUrl": "http://n2-q.mafengwo.net/s11/M00/67/41/wKgBEFqre-OASz84AAKw0i92QaM13.jpeg?imageView2%2F2%2Fw%2F680%2Fq%2F90%7Cwatermark%2F1%2Fimage%2FaHR0cDovL240LXEubWFmZW5nd28ubmV0L3MxMS9NMDAvQzQvMTAvd0tnQkVGcDdzdnVBVk90Z0FBQVhuUTQzcDdjNzA1LnBuZz9pbWFnZU1vZ3IyJTJGdGh1bWJuYWlsJTJGMTgweCUyRnF1YWxpdHklMkY5MA%3D%3D%2Fgravity%2FSouthEast%2Fdx%2F10%2Fdy%2F15%2Fdissolve%2F40",
+        "title": "九曲十八弯",
+        "desc": "感受夕阳，数一数到底有几个太阳"
+      }, {
+        "id": "0002",
+        "imgUrl": "http://n2-q.mafengwo.net/s11/M00/67/46/wKgBEFqre-aAF_MQAAPbP5gXcbM29.jpeg?imageView2%2F2%2Fw%2F680%2Fq%2F90%7Cwatermark%2F1%2Fimage%2FaHR0cDovL240LXEubWFmZW5nd28ubmV0L3MxMS9NMDAvQzQvMTAvd0tnQkVGcDdzdnVBVk90Z0FBQVhuUTQzcDdjNzA1LnBuZz9pbWFnZU1vZ3IyJTJGdGh1bWJuYWlsJTJGMTgweCUyRnF1YWxpdHklMkY5MA%3D%3D%2Fgravity%2FSouthEast%2Fdx%2F10%2Fdy%2F15%2Fdissolve%2F40",
+        "title": "来新疆必去伊犁",
+        "desc": "春天的伊犁野生杏花沟，带你观赏不一样的花海"
+      }, {
+        "id": "0003",
+        "imgUrl": "https://dimg08.c-ctrip.com/images/fd/tg/g4/M09/E4/F1/CggYHVYTaY6AN_TaAAD0cd9HFvY636_C_1600_1200_Mtg_7.jpg",
+        "title": "独库公路",
+        "desc": "中国最美的公路"
+      }, {
+        "id": "0004",
+        "imgUrl": "http://b4-q.mafengwo.net/s8/M00/14/E4/wKgBpVUOKp-AdKaXAAPhHgas-Ck10.jpeg?imageMogr2%2Fthumbnail%2F%21690x370r%2Fgravity%2FCenter%2Fcrop%2F%21690x370%2Fquality%2F100",
+        "title": "霍尔果斯大桥",
+        "desc": "感受夕阳下的霍尔果斯"
+      }, {
+        "id": "0005",
+        "imgUrl": "https://dimg03.c-ctrip.com/images/1009060000001ei1m2C71_C_500_280.jpg",
+        "title": "赛里木湖",
+        "desc": "大西洋的最后一滴眼泪"
+      }]
+  }
+}
